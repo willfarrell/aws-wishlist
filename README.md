@@ -25,12 +25,12 @@ List of features I'd love to see come to AWS. For the most part, improved securi
 - [ ] NodeJS v18 runtime (https://github.com/aws/aws-lambda-base-images/issues/47)
 - [ ] arm64 support in Canada (feature parity to us-*)
 - [ ] aws sdk js v3 missing RDS.Signer support (https://github.com/aws/aws-sdk-js-v3/issues/1823)
-- [ ] Allow min TLS to be set to 1.3 (https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/enforcing-tls.html)
+- [ ] Allow min TLS to be set to 1.3 (https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/enforcing-tls.html)
 - [ ] Inclusion of aws-sdk-v3-js in runtime or layer (https://github.com/aws/aws-sdk-js-v3/issues/2149)
-- [ ] nodejs ESM runtime unable to access runtime or layer node_modules (Bug?)
+- [ ] nodejs ESM runtime unable to access runtime or layer node_modules (Regession?)
 - [ ] Unable to use X-Ray SDK with ESM (https://github.com/aws/aws-xray-sdk-node/issues/482)
 - [ ] Support Server-Sent Events (SSE) (https://germano.dev/sse-websockets/#sse)
-- [ ] support for stream responses (apig limitation)
+- [ ] support for stream responses (apig limitation?)
 
 ## ECS
 - [ ] arm support in Canada (feature parity to us-*)
@@ -42,7 +42,7 @@ List of features I'd love to see come to AWS. For the most part, improved securi
 - [ ] Cheaper VPC Endpoints
 
 ## RDS
-- [ ] Aurora Serverless v2 Data API - plans to include? (`COPY TO/FROM` support?)
+- [ ] Aurora Serverless v2 Data API - plans to include? (`COPY TO/FROM` supported?)
 - [ ] Aurora Serverless v2 & RDS Proxy Postgres v14 (feature parity with RDS)
 
 ## X-Ray
