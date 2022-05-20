@@ -1,4 +1,4 @@
-# aws-wishlist
+# AWS Wishlist
 List of features I'd love to see come to AWS. For the most part, improved security & performance, and feature parity with other services and data centres.
 
 ## ACM
