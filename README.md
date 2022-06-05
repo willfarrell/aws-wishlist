@@ -42,8 +42,9 @@ List of features I'd love to see come to AWS. For the most part, improved securi
 - [ ] Cheaper VPC Endpoints
 
 ## RDS
-- [ ] Aurora Serverless v2 Data API - plans to include? (`COPY TO/FROM` supported?)
-- [ ] Aurora Serverless v2 & RDS Proxy Postgres v14 (feature parity with RDS)
+- [ ] Aurora Serverless v2 Data API Missing (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
+- [ ] Aurora Serverless v2 should scale down to zero ACUs (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
+- [ ] Aurora Serverless v2 Postgres v14 (feature parity with RDS)
 
 ## X-Ray
 - [ ] support event sources (CloudFront, APIG HTTP, cloudwatch, s3, sns, console)
