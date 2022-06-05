@@ -38,13 +38,14 @@ List of features I'd love to see come to AWS. For the most part, improved securi
 - [ ] Fargate tasks without a VPC, or lambda without time restriction
 
 ## VPC (for ECS)
-- [ ] Cheaper / Smaller NAT Gateway
-- [ ] Cheaper VPC Endpoints
+- [ ] Cheaper / Smaller NAT Gateway, or serverless option
+- [ ] Cheaper VPC Endpoints, or serverless option
 
 ## RDS
 - [ ] Aurora Serverless v2 Data API Missing, support for `COPY TO/FROM` (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
 - [ ] Aurora Serverless v2 should scale down to zero ACUs (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
 - [ ] Aurora Serverless v2 Postgres v14 (feature parity with RDS)
+- [ ] Cheaper RDS Proxy, or serverless option
 
 ## X-Ray
 - [ ] support event sources (CloudFront, APIG HTTP, cloudwatch, s3, sns, console)
