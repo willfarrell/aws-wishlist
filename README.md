@@ -24,7 +24,6 @@ List of features I'd love to see come to AWS. For the most part, improved securi
 ## Lambda
 - [ ] NodeJS v18 runtime (https://github.com/aws/aws-lambda-base-images/issues/47)
 - [ ] arm64 support in Canada (feature parity to us-*)
-- [ ] aws sdk js v3 missing RDS.Signer support (https://github.com/aws/aws-sdk-js-v3/issues/1823)
 - [ ] Allow min TLS to be set to 1.3 (https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/enforcing-tls.html)
 - [ ] Inclusion of aws-sdk-v3-js in runtime or layer (https://github.com/aws/aws-sdk-js-v3/issues/2149)
 - [ ] nodejs ESM runtime unable to access runtime or layer node_modules (Regession?)
