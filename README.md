@@ -57,6 +57,12 @@ List of features I'd love to see come to AWS. For the most part, improved securi
 - [ ] Update to `CIS AWS Foundations Benchmark` to v1.4.0 (https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_2.html)
 - [ ] Show enabled integrations in Security standards list for easy filtering and viewing
 
+
+## S3
+
+- [ ] HTTPS support for website URLs
+
+
 ## CloudWatch
 - [ ] Step Function Execution event history links back to specific log, not just log group for lambda and ECS
 - [ ] X-Ray Traces link back to specific log
