@@ -57,6 +57,11 @@ List of features I'd love to see come to AWS. For the most part, improved securi
 - [ ] Update to `CIS AWS Foundations Benchmark` to v1.4.0 (https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_2.html)
 - [ ] Show enabled integrations in Security standards list for easy filtering and viewing
 
+## CloudWatch
+- [ ] Step Function Execution event history links bakc to specific log, not just log group
+- [ ] X-Ray Traces link back to specific log
+- [ ] Allow easy filtering for logs part of Request Id
+
 ## BIlling
 -  CO2 (currently 0.1 over 2y): 
   - [ ] More granular details - by service
