@@ -58,7 +58,7 @@ List of features I'd love to see come to AWS. For the most part, improved securi
 - [ ] Show enabled integrations in Security standards list for easy filtering and viewing
 
 ## CloudWatch
-- [ ] Step Function Execution event history links bakc to specific log, not just log group
+- [ ] Step Function Execution event history links back to specific log, not just log group for lambda and ECS
 - [ ] X-Ray Traces link back to specific log
 - [ ] Allow easy filtering for logs part of Request Id
 
