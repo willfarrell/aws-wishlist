@@ -1,5 +1,5 @@
 # AWS Wishlist
-List of features I'd love to see come to AWS. For the most part, improved security, performance, feature parity with other services and data centres. If you work at AWS and would like to discuss some of these items, you can find me on the `AWS Developers` Slack Workspace.
+List of features I'd love to see come to AWS. For the most part improved security, performance, feature parity with other services and data centres. If you work at AWS and would like to discuss some of these items, you can find me on the `AWS Developers` Slack Workspace.
 
 ## ACM
 - [ ] Support storing ECDSA (P-384, P-521) certificates
@@ -68,5 +68,4 @@ List of features I'd love to see come to AWS. For the most part, improved securi
   - [ ] Toggle egress estimate? CloudFront to IP transfer
 
 ## New
-- IPFS mode for S3
-- IPFS serverless node
+- IPFS serverless service (Save files to s3, serverless node, serverless http gateway)
