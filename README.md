@@ -62,7 +62,8 @@ List of features I'd love to see come to AWS. For the most part, improved securi
 - [ ] Allow easy filtering for logs using Request Id
 
 ## BIlling
--  CO2 (currently 0.1 over 2y): 
+-  CO2 Impact: 
+  - [ ] Have `ca-central-1` & `ca-west-1` classified as a green data centres
   - [ ] More granular details - by service
   - [ ] Toggle egress estimate? CloudFront to IP transfer
 
