@@ -3,7 +3,7 @@ List of features I'd love to see come to AWS. For the most part, improved securi
 
 ## ACM
 - [ ] Support storing ECDSA (P-384, P-521) certificates
-- [ ] Support creating ECDSA certificates (Switch to letsencrypt)
+- [ ] Support creating ECDSA certificates (https://letsencrypt.org/upcoming-features/#ecdsa-root-and-intermediates)
 
 ## CloudFront
 - [ ] Response Header Policy (easier to meet security best practice and reduce header size):
