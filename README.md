@@ -65,3 +65,7 @@ List of features I'd love to see come to AWS. For the most part, improved securi
 -  CO2 (currently 0.1 over 2y): 
   - [ ] More granular details - by service
   - [ ] Toggle egress estimate? CloudFront to IP transfer
+
+## New
+- IPFS mode for S3
+- IPFS serverless node
