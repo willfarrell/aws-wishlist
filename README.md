@@ -44,6 +44,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Aurora Serverless v2 Data API Missing, support for `COPY TO/FROM` (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
 - [ ] Aurora Serverless v2 should scale down to zero ACUs (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
 - [ ] Aurora Serverless v2 Postgres v14 (feature parity with RDS)
+- [ ] Support for Postgres TimescaleDB extension
 - [ ] Cheaper RDS Proxy, or serverless option
 
 ## X-Ray
