@@ -3,7 +3,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## ACM
 - [ ] Support storing ECDSA (P-384, P-521) certificates
-- [ ] Support creating ECDSA certificates (https://letsencrypt.org/upcoming-features/#ecdsa-root-and-intermediates)
+- [ ] Support creating root and intermediate ECDSA certificates (https://letsencrypt.org/upcoming-features/#ecdsa-root-and-intermediates)
 
 ## CloudFront
 - [ ] Response Header Policy (easier to meet security best practice and reduce header size):
@@ -18,18 +18,18 @@ List of features I'd love to see come to AWS. For the most part improved securit
   - [ ] HTTP/3
 
 ## FIPS 140 (https://aws.amazon.com/compliance/fips/)
-- [ ] Support on ecr, ecs, iam, lambda, ses/email, sns, sqs, ssm, states, xray in `ca-*` (feature parity to `us-*`)
+- [ ] Support on ecr, ecs, iam, lambda, ses/email, sns, sqs, ssm, states, xray, etc in `ca-*` (feature parity to `us-*`)
 - [ ] Plans to update to FIPS 140-3 (https://www.encryptionconsulting.com/knowing-the-new-fips-140-3/)
 
 ## Lambda
 - [ ] NodeJS v18 runtime (https://github.com/aws/aws-lambda-base-images/issues/47)
 - [ ] arm64 support in `ca-*` (feature parity to `us-*`)
-- [ ] Allow min TLS to be set to 1.3 (https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/enforcing-tls.html)
-- [ ] Inclusion of aws-sdk-v3-js in runtime or layer (https://github.com/aws/aws-sdk-js-v3/issues/2149)
 - [ ] NodeJS ESM runtime unable to access runtime or layer node_modules (Regession?)
 - [ ] Unable to use X-Ray SDK with NodeJS ESM runtimes (https://github.com/aws/aws-xray-sdk-node/issues/482)
+- [ ] Inclusion of aws-sdk-v3-js in runtime or layer (https://github.com/aws/aws-sdk-js-v3/issues/2149)
+- [ ] All services support TLS v1.3 (https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/enforcing-tls.html)
 - [ ] Support Server-Sent Events (SSE) (https://germano.dev/sse-websockets/#sse)
-- [ ] support for stream responses (https://github.com/middyjs/middy/issues/678)
+- [ ] Support for stream responses (https://github.com/middyjs/middy/issues/678)
 
 ## ECS
 - [ ] arm64 support in `ca-*` (feature parity to `us-*`)
@@ -41,17 +41,18 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Cheaper VPC Endpoints, or serverless option
 
 ## RDS
-- [ ] Aurora Serverless v2 Data API Missing, support for `COPY TO/FROM` (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
-- [ ] Aurora Serverless v2 should scale down to zero ACUs (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
-- [ ] Aurora Serverless v2 Postgres v14 (feature parity with RDS)
+- [ ] Aurora Serverless v2
+  - [ ] Data API Missing, support for `COPY TO/FROM` (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
+  - [ ] Should scale down to zero ACUs (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
+  - [ ] Postgres v14 (feature parity with RDS)
 - [ ] Support for Postgres TimescaleDB extension (https://github.com/timescale/timescaledb/issues/65)
 - [ ] Cheaper RDS Proxy, or serverless option
 
 ## X-Ray
-- [ ] support event sources (CloudFront, APIG HTTP, cloudwatch, s3, sns, console)
-- [ ] support for x-ray on CloudFront + WAF + lambda@edge
+- [ ] Support event sources (CloudFront, APIG HTTP, cloudwatch, s3, sns, console)
+- [ ] Support for x-ray on CloudFront + WAF + lambda@edge
 - [ ] Be able to measure during cold start (queue and connect to first request ID?)
-- [ ] Be able to see 24-36h time period
+- [ ] Be able to see longer time period (24-36h)
 
 ## Security Hub
 - [ ] Update `CIS AWS Foundations Benchmark` to v1.4.0 (https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_2.html)
