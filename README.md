@@ -19,14 +19,14 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## FIPS 140 (https://aws.amazon.com/compliance/fips/)
 - [ ] Support on ecr, ecs, iam, lambda, ses/email, sns, sqs, ssm, states, xray, etc in `ca-*` (feature parity to `us-*`)
-- [ ] Plans to update to FIPS 140-3 (https://www.encryptionconsulting.com/knowing-the-new-fips-140-3/)
+- [ ] Plans to update to FIPS 140-3? when? (https://www.encryptionconsulting.com/knowing-the-new-fips-140-3/)
 
 ## Lambda
 - [ ] NodeJS v18 runtime (https://github.com/aws/aws-lambda-base-images/issues/47)
 - [ ] arm64 support in `ca-*` (feature parity to `us-*`)
 - [ ] NodeJS ESM runtime unable to access runtime or layer node_modules (Regession?)
 - [ ] Unable to use X-Ray SDK with NodeJS ESM runtimes (https://github.com/aws/aws-xray-sdk-node/issues/482)
-- [ ] Inclusion of aws-sdk-v3-js in runtime or layer (https://github.com/aws/aws-sdk-js-v3/issues/2149)
+- [ ] Inclusion of aws-sdk-v3-js in runtime (https://github.com/aws/aws-sdk-js-v3/issues/2149)
 - [ ] All services support TLS v1.3 (https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/enforcing-tls.html)
 - [ ] Support Server-Sent Events (SSE) (https://germano.dev/sse-websockets/#sse)
 - [ ] Support for stream responses (https://github.com/middyjs/middy/issues/678)
@@ -42,7 +42,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## RDS
 - [ ] Aurora Serverless v2
-  - [ ] Data API Missing, support for `COPY TO/FROM` (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
+  - [ ] Data API Missing, support for streams using `COPY TO/FROM` (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
   - [ ] Should scale down to zero ACUs (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
   - [ ] Postgres v14 (feature parity with RDS)
 - [ ] Support for Postgres TimescaleDB extension (https://github.com/timescale/timescaledb/issues/65)
@@ -64,10 +64,10 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Allow easy filtering for logs using Request Id
 
 ## BIlling
--  CO2 Impact: 
+- CO2 Impact: 
   - [ ] Have `ca-central-1` & `ca-west-1` classified as a green data centres
   - [ ] More granular details - by service
-  - [ ] Toggle egress estimate? CloudFront to IP transfer
+  - [ ] Toggle egress estimate? CloudFront to IP transfer impact
 
 ## New
 - IPFS serverless service (Save files to s3, serverless node, serverless http gateway)
