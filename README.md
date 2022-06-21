@@ -17,6 +17,9 @@ List of features I'd love to see come to AWS. For the most part improved securit
   - [ ] HTTP/2 0-RTT
   - [ ] HTTP/3
 
+## CodeBuild
+- [ ] Support filters or regexes for branch names. Currently only static and known before-hand branch names have a 1-to-1 relationship with CodeBuild/CodePipeline per static branch name.
+
 ## FIPS 140 (https://aws.amazon.com/compliance/fips/)
 - [ ] Support on ecr, ecs, iam, lambda, ses/email, sns, sqs, ssm, states, xray, etc in `ca-*` (feature parity to `us-*`)
 - [ ] Plans to update to FIPS 140-3 (https://www.encryptionconsulting.com/knowing-the-new-fips-140-3/)
