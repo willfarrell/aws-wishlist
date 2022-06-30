@@ -31,7 +31,9 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Unable to use X-Ray SDK with NodeJS ESM runtimes (https://github.com/aws/aws-xray-sdk-node/issues/482)
 - [ ] Inclusion of aws-sdk-v3-js in runtime (https://github.com/aws/aws-sdk-js-v3/issues/2149)
 - [ ] All services support TLS v1.3 (https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/enforcing-tls.html)
-- [ ] Support Server-Sent Events (SSE) (https://germano.dev/sse-websockets/#sse)
+- [ ] Support multiple responses
+  - [ ] Early Hints (https://developer.chrome.com/blog/early-hints/)
+  - [ ] Support Server-Sent Events (SSE) (https://germano.dev/sse-websockets/#sse)
 - [ ] Support for stream responses (https://github.com/middyjs/middy/issues/678)
 
 ## ECS
