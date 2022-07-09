@@ -24,6 +24,9 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Support on ecr, ecs, iam, lambda, ses/email, sns, sqs, ssm, states, xray, etc in `ca-*` (feature parity to `us-*`)
 - [ ] Plans to update to FIPS 140-3? when? (https://www.encryptionconsulting.com/knowing-the-new-fips-140-3/)
 
+### API Gateway (HTTP)
+- [ ] Easy way to only allow access from CloudFront
+
 ## Lambda
 - [ ] NodeJS v18 runtime (https://github.com/aws/aws-lambda-base-images/issues/47)
 - [ ] arm64 support in `ca-*` (feature parity to `us-*`)
