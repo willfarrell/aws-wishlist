@@ -38,6 +38,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
   - [ ] Early Hints (https://developer.chrome.com/blog/early-hints/)
   - [ ] Support Server-Sent Events (SSE) (https://germano.dev/sse-websockets/#sse)
 - [ ] Support for stream responses (https://github.com/middyjs/middy/issues/678)
+- [ ] Support security policy to limit disk and network access (https://github.com/awslabs/aws-lambda-powertools-typescript/discussions/690)
 
 ## ECS
 - [ ] arm64 support in `ca-*` (feature parity to `us-*`)
