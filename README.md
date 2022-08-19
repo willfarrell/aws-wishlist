@@ -13,8 +13,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
   - Add support to `Report-To`, apply to html files only
   - Maybe there needs to be an option to set the mime types a header should be applied to
 - Protocol Feature Parity w/ CloudFlare
-  - [ ] HTTP/2 PUSH (https://www.linkedin.com/pulse/dear-cloudfront-wheres-server-push-0-rtt-http3-almost-agarwalla/?articleId=6662735421019160577)
-  - [ ] HTTP/2 0-RTT
+  - [?] HTTP/2 PUSH/0-RTT (https://www.linkedin.com/pulse/dear-cloudfront-wheres-server-push-0-rtt-http3-almost-agarwalla/?articleId=6662735421019160577) (Deprecated: https://developer.chrome.com/blog/removing-push/)
   - [x] HTTP/3 [2022-08-15](https://aws.amazon.com/about-aws/whats-new/2022/08/amazon-cloudfront-supports-http-3-quic/)
 
 ## WAF
