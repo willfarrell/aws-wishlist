@@ -50,6 +50,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Cheaper VPC Endpoints, or serverless option
 
 ## RDS
+- [ ] postgres v15
 - [ ] Aurora Serverless v2
   - [ ] Data API Missing, support for streams using `COPY TO/FROM` (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
   - [ ] Should scale down to zero ACUs (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
