@@ -40,6 +40,9 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Support for stream responses (https://github.com/middyjs/middy/issues/678)
 - [ ] Support security policy to limit disk and network access (https://github.com/awslabs/aws-lambda-powertools-typescript/discussions/690)
 
+## S3
+- [ ] For Upload Signed URLs, allow only one file to complete. Additional attempts before expiry should be rejected.
+
 ## ECS
 - [ ] arm64 support in `ca-*` (feature parity to `us-*`)
 - [ ] Fargate tasks without a VPC, or lambda without time restriction
