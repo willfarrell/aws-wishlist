@@ -38,7 +38,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
   - [ ] Early Hints (https://developer.chrome.com/blog/early-hints/)
   - [ ] Support Server-Sent Events (SSE) (https://germano.dev/sse-websockets/#sse)
 - [ ] Support for stream responses (https://github.com/middyjs/middy/issues/678)
-- [ ] Support security policy to limit disk and network access (https://github.com/awslabs/aws-lambda-powertools-typescript/discussions/690)
+- [ ] Support security policy to limit disk and network access (https://github.com/awslabs/aws-lambda-powertools-typescript/discussions/690 / https://medium.com/cloud-security/lambda-networking-72e2b915f31b)
 
 ## S3
 - [ ] For Upload Signed URLs, allow only one file to complete. Additional attempts before expiry should be rejected.
