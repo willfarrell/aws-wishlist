@@ -28,7 +28,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## Lambda
 - [ ] NodeJS v18 runtime (https://github.com/aws/aws-lambda-base-images/issues/47)
-- [ ] arm64 support in `ca-*` (feature parity to `us-*`) [2022-10-06](https://aws.amazon.com/about-aws/whats-new/2022/10/aws-lambda-functions-graviton2-12-regions/)
+- [x] arm64 support in `ca-*` (feature parity to `us-*`) [2022-10-06](https://aws.amazon.com/about-aws/whats-new/2022/10/aws-lambda-functions-graviton2-12-regions/)
 - [ ] NodeJS ESM runtime unable to access runtime or layer node_modules (Regession?)
 - [ ] Function URLs supports WebSockets
 - [ ] Unable to use X-Ray SDK with NodeJS ESM runtimes (https://github.com/aws/aws-xray-sdk-node/issues/482)
