@@ -35,7 +35,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Inclusion of aws-sdk-v3-js in runtime (https://github.com/aws/aws-sdk-js-v3/issues/2149)
 - [ ] All services support TLS v1.3 (https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/enforcing-tls.html)
 - [ ] Support multiple responses
-  - [ ] Early Hints (https://developer.chrome.com/blog/early-hints/)
+  - [ ] Early Hints (https://developer.chrome.com/blog/early-hints/) (https://blog.cloudflare.com/early-hints-on-cloudflare-pages/)
   - [ ] Support Server-Sent Events (SSE) (https://germano.dev/sse-websockets/#sse)
 - [ ] Support for stream responses (https://github.com/middyjs/middy/issues/678)
 - [ ] Support security policy to limit disk and network access (https://github.com/awslabs/aws-lambda-powertools-typescript/discussions/690 / https://medium.com/cloud-security/lambda-networking-72e2b915f31b)
