@@ -86,3 +86,4 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## New
 - IPFS serverless service (Save files to s3, serverless node, serverless http gateway)
+- CloudFront & ACM support for Onion Secret services endpoint for Tor
