@@ -31,6 +31,18 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] NodeJS v18 runtime (https://github.com/aws/aws-lambda-base-images/issues/47)
 - [ ] Inclusion of aws-sdk-v3-js in runtime (https://github.com/aws/aws-sdk-js-v3/issues/2149)
 - [ ] Built-in AbortController timeout signal (See middy implementation https://github.com/middyjs/middy/blob/main/packages/core/index.js#L103-L121)
+- [ ] AWS Supports multiple libraries for the same thing
+  - [ ] Trace 
+    - [AWS SDK XRay Node](https://github.com/aws/aws-xray-sdk-node/tree/master)
+    - [AWS Powertools TypeScript](https://awslabs.github.io/aws-lambda-powertools-typescript/latest/core/tracer/)
+    - [Otel](https://aws-otel.github.io/docs/getting-started/js-sdk/trace-manual-instr)
+  - [ ] Metrics
+    - [aws-embedded-metrics](https://github.com/awslabs/aws-embedded-metrics-node)
+    - [AWS Powertools TypeScript](https://awslabs.github.io/aws-lambda-powertools-typescript/latest/core/metrics/)
+    - [Otel](https://aws-otel.github.io/docs/getting-started/js-sdk/metric-manual-instr)
+  - [ ] Logging
+    - [AWS Powertools TypeScript](https://awslabs.github.io/aws-lambda-powertools-typescript/latest/core/logger/)
+    - [Otel](https://aws-otel.github.io/docs/getting-started/javascript-sdk)
 - [ ] Support for stream responses (https://github.com/middyjs/middy/issues/678)
 - [ ] NodeJS ESM Full support
   - [ ] NodeJS ESM runtime unable to access runtime or layer node_modules (Regession?)
