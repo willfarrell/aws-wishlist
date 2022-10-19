@@ -44,6 +44,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
     - [AWS Powertools TypeScript](https://awslabs.github.io/aws-lambda-powertools-typescript/latest/core/logger/)
     - [Otel](https://aws-otel.github.io/docs/getting-started/javascript-sdk)
 - [ ] Support for stream responses (https://github.com/middyjs/middy/issues/678)
+- [x] arm64 support for Lambda@Edge
 - [ ] NodeJS ESM Full support
   - [ ] NodeJS ESM runtime unable to access runtime or layer node_modules (Regession?)
   - [ ] Unable to use X-Ray SDK with NodeJS ESM runtimes (https://github.com/aws/aws-xray-sdk-node/issues/482)
