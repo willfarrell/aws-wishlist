@@ -6,9 +6,10 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Support creating root and intermediate ECDSA certificates (https://letsencrypt.org/upcoming-features/#ecdsa-root-and-intermediates)
 
 ## CloudFront
+- [ ] Origin Shield Support in Canada (https://www.foxy.io/blog/cloudfront-vs-cloudflare-and-how-to-reduce-response-times-for-both-by-35/)
 - [ ] Response Header Policy (easier to meet security best practice and reduce header size):
   - Unable to set headers to blank (ie `Server`, `X-Powered-By`)
-  - `Content-Security-Policy` incorrectly applies to non-html
+  - `Content-Security-Policy` incorrectly applies to non-html (workaround, add more behaviours)
   - Add support for `Permissions-Policy`, apply to html and js files only
   - Add support to `Report-To`, apply to html files only
   - Maybe there needs to be an option to set the mime types a header should be applied to
