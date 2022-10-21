@@ -6,6 +6,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Support creating root and intermediate ECDSA certificates (https://letsencrypt.org/upcoming-features/#ecdsa-root-and-intermediates)
 
 ## CloudFront
+- [ ] TLS 1.3 Only option
 - [ ] Origin Shield Support in Canada (https://www.foxy.io/blog/cloudfront-vs-cloudflare-and-how-to-reduce-response-times-for-both-by-35/)
 - [ ] Response Header Policy (easier to meet security best practice and reduce header size):
   - Unable to set headers to blank (ie `Server`, `X-Powered-By`)
