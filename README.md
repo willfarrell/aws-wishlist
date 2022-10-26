@@ -8,9 +8,9 @@ List of features I'd love to see come to AWS. For the most part improved securit
 ## CloudFront
 - [ ] TLS 1.3 Only option
 - [ ] Origin Shield Support in Canada (https://www.foxy.io/blog/cloudfront-vs-cloudflare-and-how-to-reduce-response-times-for-both-by-35/)
-- [ ] Response Header Policy (easier to meet security best practice and reduce header size):
+- [ ] Response Header Policy (easier to meet security best practice and reduce header size) (workarounds, add more behaviours or set to single char):
   - Unable to set headers to blank (ie `Server`, `X-Powered-By`)
-  - `Content-Security-Policy` incorrectly applies to non-html (workaround, add more behaviours)
+  - `Content-Security-Policy` incorrectly applies to non-html
   - Add support for `Permissions-Policy`, apply to html and js files only
   - Add support to `Report-To`, apply to html files only
   - Maybe there needs to be an option to set the mime types a header should be applied to
@@ -46,7 +46,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
     - [AWS Powertools TypeScript](https://awslabs.github.io/aws-lambda-powertools-typescript/latest/core/logger/)
     - [Otel](https://aws-otel.github.io/docs/getting-started/javascript-sdk)
 - [ ] Support for stream responses (https://github.com/middyjs/middy/issues/678)
-- [x] arm64 support for Lambda@Edge
+- [ ] arm64 support for Lambda@Edge
 - [ ] NodeJS ESM Full support
   - [ ] NodeJS ESM runtime unable to access runtime or layer node_modules (Regession?)
   - [ ] Unable to use X-Ray SDK with NodeJS ESM runtimes (https://github.com/aws/aws-xray-sdk-node/issues/482)
@@ -55,26 +55,28 @@ List of features I'd love to see come to AWS. For the most part improved securit
   - [ ] Early Hints (https://developer.chrome.com/blog/early-hints/) (https://blog.cloudflare.com/early-hints-on-cloudflare-pages/)
   - [ ] Support Server-Sent Events (SSE) (https://germano.dev/sse-websockets/#sse)
 - [ ] Support security policy to limit disk and network access (https://github.com/awslabs/aws-lambda-powertools-typescript/discussions/690 / https://medium.com/cloud-security/lambda-networking-72e2b915f31b)
+- [ ] Allow lambda to run for hours (or fargate w/o a VPC)
 - [ ] Function URLs supports WebSockets
 - [x] arm64 support in `ca-*` (feature parity to `us-*`) [2022-10-06](https://aws.amazon.com/about-aws/whats-new/2022/10/aws-lambda-functions-graviton2-12-regions/)
 
-## S3
-- [ ] For Upload Signed URLs, allow only one file to complete. Additional attempts before expiry should be rejected.
-
 ## ECS
 - [ ] arm64 support in `ca-*` (feature parity to `us-*`)
-- [ ] Fargate tasks without a VPC, or lambda without time restriction
+- [ ] Fargate tasks without a VPC (or lambda without time restriction)
 - [ ] Fargate tasks have 30s cold start time when being run as a task
 
 ## VPC (for ECS Fargate Tasks)
 - [ ] Cheaper / Smaller NAT Gateway, or serverless option
 - [ ] Cheaper VPC Endpoints, or serverless option
 
+## S3
+- [ ] For Upload Signed URLs, allow only one file to complete. Additional attempts before expiry should be rejected.
+
 ## RDS
 - [ ] postgres v15
 - [ ] Aurora Serverless v2
   - [ ] Data API Missing, support for streams using `COPY TO/FROM` (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
   - [ ] Should scale down to zero ACUs (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
+  - [ ] Postgres v15 (feature parity with RDS)
   - [x] Postgres v14 (feature parity with RDS) [2022-06-22](https://aws.amazon.com/about-aws/whats-new/2022/06/amazon-aurora-supports-postgresql-14/)
 - [ ] Support for Postgres TimescaleDB extension (https://github.com/timescale/timescaledb/issues/65)
 - [ ] Cheaper RDS Proxy, or serverless option
@@ -92,7 +94,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 ## CloudWatch
 - [ ] Step Function Execution event history links back to specific log, not just log group for lambda and ECS
 - [ ] X-Ray Traces link back to specific log for lambda and ECS
-- [ ] Allow easy filtering for logs using Request Id
+- [ ] Allow easy filtering for logs using Request Id - Request Id timeline view across all services
 
 ## BIlling
 - CO2 Impact: 
