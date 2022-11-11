@@ -89,7 +89,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Be able to see longer time period (24-36h)
 
 ## Security Hub
-- [ ] Update `CIS AWS Foundations Benchmark` to v1.4.0 (https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_2.html)
+- [x] Update `CIS AWS Foundations Benchmark` to v1.4.0 (https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_2.html) [2022-11-10](https://aws.amazon.com/about-aws/whats-new/2022/11/security-hub-center-internet-securitys-cis-foundations-benchmark-version-1-4-0/)
 - [ ] Show enabled integrations in Security standards list for easy filtering and viewing (i.e. Prowler)
 
 ## CloudWatch
