@@ -30,8 +30,6 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Easy way to only allow access from CloudFront
 
 ## Lambda
-- [ ] NodeJS v18 runtime (https://github.com/aws/aws-lambda-base-images/issues/47)
-- [ ] Inclusion of aws-sdk-v3-js in runtime (https://github.com/aws/aws-sdk-js-v3/issues/2149)
 - [ ] Built-in AbortController timeout signal (See middy implementation https://github.com/middyjs/middy/blob/main/packages/core/index.js#L103-L121)
 - [ ] AWS Supports multiple libraries for the same thing
   - [ ] Trace 
@@ -59,6 +57,8 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Allow lambda to run for hours (or fargate w/o a VPC)
 - [ ] Function URLs supports WebSockets
 - [x] arm64 support in `ca-*` (feature parity to `us-*`) [2022-10-06](https://aws.amazon.com/about-aws/whats-new/2022/10/aws-lambda-functions-graviton2-12-regions/)
+- [x] NodeJS v18 runtime (https://github.com/aws/aws-lambda-base-images/issues/47) [2022-11-18](https://aws.amazon.com/about-aws/whats-new/2022/11/aws-lambda-support-node-js-18/)
+- [x] Inclusion of aws-sdk-v3-js in runtime (https://github.com/aws/aws-sdk-js-v3/issues/2149) [2022-11-18](https://aws.amazon.com/about-aws/whats-new/2022/11/aws-lambda-support-node-js-18/)
 
 ## ECS
 - [ ] arm64 support in `ca-*` (feature parity to `us-*`)
