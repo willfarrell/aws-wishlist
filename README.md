@@ -30,6 +30,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Easy way to only allow access from CloudFront
 
 ## Lambda
+- [ ] [SDK v3 support for S3 global endpoints](https://github.com/aws/aws-sdk-js-v3/issues/1807)
 - [ ] Built-in AbortController timeout signal (See middy implementation https://github.com/middyjs/middy/blob/main/packages/core/index.js#L103-L121)
 - [ ] AWS Supports multiple libraries for the same thing
   - [ ] Trace 
