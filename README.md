@@ -47,9 +47,6 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Allow X-Ray tracing for cold starts
 - [ ] Support for stream responses (https://github.com/middyjs/middy/issues/678)
 - [ ] arm64 support for Lambda@Edge
-- [ ] NodeJS ESM Full support
-  - [ ] NodeJS ESM runtime unable to access runtime or layer node_modules (Regession?)
-  - [ ] Unable to use X-Ray SDK with NodeJS ESM runtimes (https://github.com/aws/aws-xray-sdk-node/issues/482)
 - [ ] All services support TLS v1.3 (https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/enforcing-tls.html)
 - [ ] Support multiple responses
   - [ ] Early Hints (https://developer.chrome.com/blog/early-hints/) (https://blog.cloudflare.com/early-hints-on-cloudflare-pages/)
@@ -57,14 +54,16 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Support security policy to limit disk and network access (https://github.com/awslabs/aws-lambda-powertools-typescript/discussions/690 / https://medium.com/cloud-security/lambda-networking-72e2b915f31b)
 - [ ] Allow lambda to run for hours (or fargate w/o a VPC)
 - [ ] Function URLs supports WebSockets
+- [x] NodeJS ESM Full support
+  - [x] NodeJS ESM runtime unable to access runtime or layer node_modules (Regession?)
 - [x] arm64 support in `ca-*` (feature parity to `us-*`) [2022-10-06](https://aws.amazon.com/about-aws/whats-new/2022/10/aws-lambda-functions-graviton2-12-regions/)
 - [x] NodeJS v18 runtime (https://github.com/aws/aws-lambda-base-images/issues/47) [2022-11-18](https://aws.amazon.com/about-aws/whats-new/2022/11/aws-lambda-support-node-js-18/)
 - [x] Inclusion of aws-sdk-v3-js in runtime (https://github.com/aws/aws-sdk-js-v3/issues/2149) [2022-11-18](https://aws.amazon.com/about-aws/whats-new/2022/11/aws-lambda-support-node-js-18/)
 
 ## ECS
-- [ ] arm64 support in `ca-*` (feature parity to `us-*`)
 - [ ] Fargate tasks without a VPC (or lambda without time restriction)
 - [ ] Fargate tasks have 30s cold start time when being run as a task
+- [x] arm64 support in `ca-*` (feature parity to `us-*`)
 
 ## VPC (for ECS Fargate Tasks)
 - [ ] Cheaper / Smaller NAT Gateway, or serverless option
@@ -90,8 +89,8 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Be able to see longer time period (24-36h)
 
 ## Security Hub
-- [x] Update `CIS AWS Foundations Benchmark` to v1.4.0 (https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_2.html) [2022-11-10](https://aws.amazon.com/about-aws/whats-new/2022/11/security-hub-center-internet-securitys-cis-foundations-benchmark-version-1-4-0/)
 - [ ] Show enabled integrations in Security standards list for easy filtering and viewing (i.e. Prowler)
+- [x] Update `CIS AWS Foundations Benchmark` to v1.4.0 (https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_2.html) [2022-11-10](https://aws.amazon.com/about-aws/whats-new/2022/11/security-hub-center-internet-securitys-cis-foundations-benchmark-version-1-4-0/)
 
 ## CloudWatch
 - [ ] Step Function Execution event history links back to specific log, not just log group for lambda and ECS
