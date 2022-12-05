@@ -61,6 +61,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [x] Inclusion of aws-sdk-v3-js in runtime (https://github.com/aws/aws-sdk-js-v3/issues/2149) [2022-11-18](https://aws.amazon.com/about-aws/whats-new/2022/11/aws-lambda-support-node-js-18/)
 
 ## ECS
+- [ ] ERC image for x-ray daemon should exist in all region
 - [ ] Fargate tasks without a VPC (or lambda without time restriction)
 - [ ] Fargate tasks have 30s cold start time when being run as a task
 - [x] arm64 support in `ca-*` (feature parity to `us-*`)
