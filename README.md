@@ -4,12 +4,13 @@ List of features I'd love to see come to AWS. For the most part improved securit
 ## ACM
 - [ ] Support storing ECDSA (P-384, P-521) certificates
 - [ ] Support creating root and intermediate ECDSA certificates (https://letsencrypt.org/upcoming-features/#ecdsa-root-and-intermediates)
+- [ ] SES DKIM support for using ECDSA (P-384, P-521)
 
 ## CloudFront
 - [ ] TLS 1.3 Only option
 - [ ] Origin Shield Support in Canada (https://www.foxy.io/blog/cloudfront-vs-cloudflare-and-how-to-reduce-response-times-for-both-by-35/)
 - [ ] Response Header Policy (easier to meet security best practice and reduce header size) (workarounds, add more behaviours or set to single char):
-  - Unable to set headers to blank (ie `Server`, `X-Powered-By`)
+  - [x] Unable to set headers to blank (ie `Server`, `X-Powered-By`) [2023-01-03](https://aws.amazon.com/about-aws/whats-new/2023/01/amazon-cloudfront-supports-removal-response-headers/)
   - `Content-Security-Policy` incorrectly applies to non-html
   - Add support for `Permissions-Policy`, apply to html and js files only
   - Add support to `Report-To`, apply to html files only
@@ -67,8 +68,8 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [x] arm64 support in `ca-*` (feature parity to `us-*`)
 
 ## VPC (for ECS Fargate Tasks)
-- [ ] Cheaper / Smaller NAT Gateway, or serverless option
-- [ ] Cheaper VPC Endpoints, or serverless option
+- [ ] Cheaper / Smaller NAT Gateway option
+- [ ] Cheaper VPC Endpoints, or combine all into one?
 
 ## S3
 - [ ] For Upload Signed URLs, allow only one file to complete. Additional attempts before expiry should be rejected.
