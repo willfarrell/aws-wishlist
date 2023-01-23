@@ -86,6 +86,12 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Support for Postgres TimescaleDB extension (https://github.com/timescale/timescaledb/issues/65)
 - [ ] Cheaper RDS Proxy, or serverless option
 
+## DynamoDB
+- [ ] DAX in `ca-*`
+
+## Neptune
+- [ ] serverless scales lower - too costly
+
 ## X-Ray
 - [ ] Support event sources (CloudFront, APIG HTTP, cloudwatch, s3, sns, console)
 - [ ] Support for x-ray on CloudFront + WAF + lambda@edge
