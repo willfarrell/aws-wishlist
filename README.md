@@ -96,6 +96,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## X-Ray
 - [ ] Support event sources (CloudFront, APIG HTTP, cloudwatch, s3, sns, console)
+  - [ ] SNS [2023-02-10](https://aws.amazon.com/about-aws/whats-new/2023/02/amazon-sns-x-ray-active-tracing-visualize-analyze-debug-application-performance/)
 - [ ] Support for x-ray on CloudFront + WAF + lambda@edge
 - [ ] Be able to measure during cold start (queue and connect to first request ID?)
 - [ ] Be able to see longer time period (24-36h)
