@@ -49,6 +49,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
     - [Otel](https://aws-otel.github.io/docs/getting-started/javascript-sdk)
 - [ ] Allow X-Ray tracing for cold starts
 - [ ] Support for stream responses (https://github.com/middyjs/middy/issues/678)
+- [ ] Function URL and CloudFront Origin Request Policies don't support Svelte named form actions (https://github.com/MikeBild/sveltekit-adapter-aws/issues/27)
 - [ ] arm64 support for Lambda@Edge
 - [ ] All services support TLS v1.3 (https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/enforcing-tls.html)
 - [ ] Support multiple responses
