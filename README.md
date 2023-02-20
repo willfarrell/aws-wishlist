@@ -7,15 +7,16 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] SES DKIM support for using ECDSA (P-384, P-521)
 
 ## CloudFront
+- [ ] Allow Sveltekit named form actions to work with CloudFront Origin Request Policies and Lambda Function URLs. (https://github.com/MikeBild/sveltekit-adapter-aws/issues/27)
+- [ ] Origin Shield Support in Canada (https://www.foxy.io/blog/cloudfront-vs-cloudflare-and-how-to-reduce-response-times-for-both-by-35/)
 - [ ] TLS 1.3 Only option
 - [ ] Connect S3 Object Lambda Access Point directly to CloudFront (https://github.com/aws-samples/amazon-s3-object-lambda-with-amazon-cloudfront)
-- [ ] Origin Shield Support in Canada (https://www.foxy.io/blog/cloudfront-vs-cloudflare-and-how-to-reduce-response-times-for-both-by-35/)
-- [ ] Response Header Policy (easier to meet security best practice and reduce header size) (workarounds, add more behaviours or set to single char):
+- [-] Response Header Policy (easier to meet security best practice and reduce header size) (workarounds, add more behaviours or set to single char):
   - [x] Unable to set headers to blank (ie `Server`, `X-Powered-By`) [2023-01-03](https://aws.amazon.com/about-aws/whats-new/2023/01/amazon-cloudfront-supports-removal-response-headers/)
-  - `Content-Security-Policy` incorrectly applies to non-html
+  - `Content-Security-Policy` incorrectly applies to non-html - workaround possible
   - Add support for `Permissions-Policy`, apply to html and js files only
   - Add support to `Report-To`, apply to html files only
-  - Maybe there needs to be an option to set the mime types a header should be applied to
+  - Maybe there needs to be an option to set the mime types a header should be applied to - workaround possible
 - Protocol Feature Parity w/ CloudFlare
   - [?] HTTP/2 PUSH/0-RTT (https://www.linkedin.com/pulse/dear-cloudfront-wheres-server-push-0-rtt-http3-almost-agarwalla/?articleId=6662735421019160577) (Deprecated: https://developer.chrome.com/blog/removing-push/)
   - [x] HTTP/3 [2022-08-15](https://aws.amazon.com/about-aws/whats-new/2022/08/amazon-cloudfront-supports-http-3-quic/)
@@ -34,7 +35,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 ## Lambda
 - [ ] [SDK v3 support for S3 global endpoints](https://github.com/aws/aws-sdk-js-v3/issues/1807)
 - [ ] Built-in AbortController timeout signal (See middy implementation https://github.com/middyjs/middy/blob/main/packages/core/index.js#L103-L121)
-- [ ] JSON Schema for all events
+- [ ] JSON Schema for all events & responses
 - [ ] AWS Supports multiple libraries for the same thing
   - [ ] Trace 
     - [AWS SDK XRay Node](https://github.com/aws/aws-xray-sdk-node/tree/master)
@@ -97,7 +98,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## X-Ray
 - [ ] Support event sources (CloudFront, APIG HTTP, cloudwatch, s3, sns, console)
-  - [ ] SNS [2023-02-10](https://aws.amazon.com/about-aws/whats-new/2023/02/amazon-sns-x-ray-active-tracing-visualize-analyze-debug-application-performance/)
+  - [x] SNS [2023-02-10](https://aws.amazon.com/about-aws/whats-new/2023/02/amazon-sns-x-ray-active-tracing-visualize-analyze-debug-application-performance/)
 - [ ] Support for x-ray on CloudFront + WAF + lambda@edge
 - [ ] Be able to measure during cold start (queue and connect to first request ID?)
 - [ ] Be able to see longer time period (24-36h)
