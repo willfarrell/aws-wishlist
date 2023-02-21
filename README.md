@@ -33,7 +33,6 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Easy way to only allow access from CloudFront
 
 ## Lambda
-- [ ] [SDK v3 support for S3 global endpoints](https://github.com/aws/aws-sdk-js-v3/issues/1807)
 - [ ] Built-in AbortController timeout signal (See middy implementation https://github.com/middyjs/middy/blob/main/packages/core/index.js#L103-L121)
 - [ ] JSON Schema for all events & responses
 - [ ] AWS Supports multiple libraries for the same thing
@@ -51,12 +50,13 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Allow X-Ray tracing for cold starts
 - [ ] Support for stream responses (https://github.com/middyjs/middy/issues/678)
 - [ ] Function URL and CloudFront Origin Request Policies don't support Svelte named form actions (https://github.com/MikeBild/sveltekit-adapter-aws/issues/27)
+- [ ] Support security policy to limit disk and network access (https://github.com/awslabs/aws-lambda-powertools-typescript/discussions/690 / https://medium.com/cloud-security/lambda-networking-72e2b915f31b)
+- [ ] [SDK v3 support for S3 global endpoints](https://github.com/aws/aws-sdk-js-v3/issues/1807)
 - [ ] arm64 support for Lambda@Edge
 - [ ] All services support TLS v1.3 (https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/enforcing-tls.html)
 - [ ] Support multiple responses
   - [ ] Early Hints (https://developer.chrome.com/blog/early-hints/) (https://blog.cloudflare.com/early-hints-on-cloudflare-pages/)
   - [ ] Support Server-Sent Events (SSE) (https://germano.dev/sse-websockets/#sse)
-- [ ] Support security policy to limit disk and network access (https://github.com/awslabs/aws-lambda-powertools-typescript/discussions/690 / https://medium.com/cloud-security/lambda-networking-72e2b915f31b)
 - [ ] Allow lambda to run for hours (or fargate w/o a VPC)
 - [ ] Function URLs supports WebSockets
 - [x] NodeJS ESM Full support
