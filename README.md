@@ -94,7 +94,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] DAX in `ca-*`
 
 ## Neptune
-- [ ] serverless scales lower - too costly
+- [ ] serverless scales lower - too costly [2023-03-02](https://aws.amazon.com/about-aws/whats-new/2023/03/amazon-neptune-serverless-scales-down-1-ncu-costs)
 
 ## X-Ray
 - [ ] Support event sources (CloudFront, APIG HTTP, cloudwatch, s3, sns, console)
