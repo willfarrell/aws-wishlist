@@ -10,7 +10,6 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Allow Sveltekit named form actions to work with CloudFront Origin Request Policies and Lambda Function URLs. (https://github.com/MikeBild/sveltekit-adapter-aws/issues/27)
 - [ ] Origin Shield Support in Canada (https://www.foxy.io/blog/cloudfront-vs-cloudflare-and-how-to-reduce-response-times-for-both-by-35/)
 - [ ] TLS 1.3 Only option
-- [ ] Connect S3 Object Lambda Access Point directly to CloudFront (https://github.com/aws-samples/amazon-s3-object-lambda-with-amazon-cloudfront)
 - [-] Response Header Policy (easier to meet security best practice and reduce header size) (workarounds, add more behaviours or set to single char):
   - [x] Unable to set headers to blank (ie `Server`, `X-Powered-By`) [2023-01-03](https://aws.amazon.com/about-aws/whats-new/2023/01/amazon-cloudfront-supports-removal-response-headers/)
   - `Content-Security-Policy` incorrectly applies to non-html - workaround possible
@@ -25,8 +24,8 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] PAT (https://blog.cloudflare.com/eliminating-captchas-on-iphones-and-macs-using-new-standard/)
 
 ## FIPS 140 (https://aws.amazon.com/compliance/fips/)
-- [ ] Support on ecr, ecs, iam, lambda, ses/email, sns, sqs, ssm, states, xray, etc in `ca-*` (feature parity to `us-*`)
-- [ ] `useFipsEndpoint`/`AWS_USE_FIPS_ENDPOINT` blindly applies to all services, epically fails in `ca-*`
+- [ ] Support on  sns, sqs, ssm, states, lambda, ses/email, xray, ecr, ecs, iam, etc in `ca-*` (feature parity to `us-*`)
+  - [ ] `useFipsEndpoint`/`AWS_USE_FIPS_ENDPOINT` blindly applies to all services, epically fails in `ca-*`
 - [ ] Plans to update to FIPS 140-3? when? (https://www.encryptionconsulting.com/knowing-the-new-fips-140-3/)
 
 ### API Gateway (HTTP)
@@ -79,7 +78,6 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] For Upload Signed URLs, allow only one file to complete. Additional attempts before expiry should be rejected.
 
 ## RDS
-- [ ] postgres v15
 - [ ] Aurora Serverless v2
   - [ ] Data API Missing, support for streams using `COPY TO/FROM` (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
   - [ ] Should scale down to zero ACUs (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
@@ -94,7 +92,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] DAX in `ca-*`
 
 ## Neptune
-- [ ] serverless scales lower - too costly [2023-03-02](https://aws.amazon.com/about-aws/whats-new/2023/03/amazon-neptune-serverless-scales-down-1-ncu-costs)
+- [ ] serverless scales lower [2023-03-02](https://aws.amazon.com/about-aws/whats-new/2023/03/amazon-neptune-serverless-scales-down-1-ncu-costs)
 
 ## X-Ray
 - [ ] Support event sources (CloudFront, APIG HTTP, cloudwatch, s3, sns, console)
@@ -105,9 +103,9 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## Security Hub
 - [ ] Show enabled integrations in Security standards list for easy filtering and viewing (i.e. Prowler)
-- [x] Update `CIS AWS Foundations Benchmark` to v1.4.0 (https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_2.html) [2022-11-10](https://aws.amazon.com/about-aws/whats-new/2022/11/security-hub-center-internet-securitys-cis-foundations-benchmark-version-1-4-0/)
 - [ ] [EC2.21](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-fsbp-controls.html#ec2-21-remediation) conflicts with [AWS Lambda / NAT Gateway Ephemeral ports](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-ephemeral-ports)
 - [ ] [Lambda.1](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-fsbp-controls.html#lambda-1-remediation) no way to pass when using CloudFront to Lambda Function URL
+- [x] Update `CIS AWS Foundations Benchmark` to v1.4.0 (https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_2.html) [2022-11-10](https://aws.amazon.com/about-aws/whats-new/2022/11/security-hub-center-internet-securitys-cis-foundations-benchmark-version-1-4-0/)
 
 ## CloudWatch
 - [ ] CloudWatch RUM in ca-central-1
