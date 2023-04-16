@@ -103,7 +103,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## Security Hub
 - [ ] Show enabled integrations in Security standards list for easy filtering and viewing (i.e. Prowler)
-- [ ] Ability to tag a resource with the reason to suppress it in Security Hub. (i.e. Key=EC2.22, Value=Used for Fargate Task that is not always running)
+- [ ] Ability to tag a resource with the reason to suppress it in Security Hub. Shows reason inside SecHub. (i.e. Key=EC2.22, Value=Used for Fargate Task that is not always running)
 - [ ] [EC2.21](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-fsbp-controls.html#ec2-21-remediation) conflicts with [AWS Lambda / NAT Gateway Ephemeral ports](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-ephemeral-ports)
 - [ ] [Lambda.1](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-fsbp-controls.html#lambda-1-remediation) no way to pass when using CloudFront to Lambda Function URL
 - [x] Update `CIS AWS Foundations Benchmark` to v1.4.0 (https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_2.html) [2022-11-10](https://aws.amazon.com/about-aws/whats-new/2022/11/security-hub-center-internet-securitys-cis-foundations-benchmark-version-1-4-0/)
