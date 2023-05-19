@@ -72,7 +72,8 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## VPC (for ECS Fargate Tasks)
 - [ ] Cheaper / Smaller NAT Gateway option
-- [ ] Cheaper VPC Endpoints, or combine all into one?
+- [ ] Cheaper VPC Endpoints, combine all into one, or have all work like gateways
+- [ ] Allow DNS override apply at the subnet level instead of the VPC level
 
 ## S3
 - [ ] For Upload Signed URLs, allow only one file to complete. Additional attempts before expiry should be rejected.
