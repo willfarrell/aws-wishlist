@@ -47,6 +47,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
     - [AWS Powertools TypeScript](https://awslabs.github.io/aws-lambda-powertools-typescript/latest/core/logger/)
     - [Otel](https://aws-otel.github.io/docs/getting-started/javascript-sdk)
 - [ ] Allow X-Ray tracing for cold starts
+- [ ] Enable support for Node.js v20 Permission Model
 - [x] Support for stream responses (https://github.com/middyjs/middy/issues/678) [2023-04-07](https://aws.amazon.com/about-aws/whats-new/2023/04/aws-lambda-response-payload-streaming/)
 - [ ] Function URL and CloudFront Origin Request Policies don't support Svelte named form actions (https://github.com/MikeBild/sveltekit-adapter-aws/issues/27)
 - [ ] Support security policy to limit disk and network access (https://github.com/awslabs/aws-lambda-powertools-typescript/discussions/690 / https://medium.com/cloud-security/lambda-networking-72e2b915f31b)
