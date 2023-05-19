@@ -82,7 +82,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
   - [ ] Data API Missing, support for streams using `COPY TO/FROM` (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
   - [ ] Should scale down to zero ACUs (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
   - [ ] Multi-region support
-  - [ ] Performance Insights shouldn't requiring scaling up ACUs (https://stackoverflow.com/questions/73026823/aws-aurora-serverless-v2-will-not-scale-down-to-5-acu-even-though-0-connections)
+  - [ ] When using a read replica, all instances are unable to scale down to minimum value.
   - [x] Postgres v15 (feature parity with RDS) [2023-04-07](https://aws.amazon.com/about-aws/whats-new/2023/04/amazon-aurora-postgresql-15/)
   - [x] Postgres v14 (feature parity with RDS) [2022-06-22](https://aws.amazon.com/about-aws/whats-new/2022/06/amazon-aurora-supports-postgresql-14/)
 - [ ] Support for Postgres TimescaleDB extension (https://github.com/timescale/timescaledb/issues/65)
