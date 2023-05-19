@@ -3,6 +3,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## ACM
 - [ ] Support storing ECDSA (P-384, P-521) certificates
+- [ ] Support creating ECDSA (P-384, P-521) certificates
 - [ ] Support creating root and intermediate ECDSA certificates (https://letsencrypt.org/upcoming-features/#ecdsa-root-and-intermediates)
 - [ ] SES DKIM support for using ECDSA (P-384, P-521)
 
