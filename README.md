@@ -70,6 +70,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] ERC image for x-ray daemon should exist in all region -us-east-1 outage prevented image from pulling, stopping all container from running
 - [ ] Fargate tasks without a VPC (or lambda without time restriction)
 - [ ] Fargate tasks have 30s cold start time when being run as a task
+- [ ] bastion service for connecting to RDS (make it easier than the few work around solutions other there)
 - [x] arm64 support in `ca-*` (feature parity to `us-*`)
 
 ## VPC (for ECS Fargate Tasks)
