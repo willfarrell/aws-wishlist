@@ -9,6 +9,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## CloudFront
 - [ ] Allow Sveltekit named form actions to work with CloudFront Origin Request Policies and Lambda Function URLs. (https://github.com/MikeBild/sveltekit-adapter-aws/issues/27)
+- [ ] Allows s3-fips origins `bucketname.s3-fips.region....`
 - [ ] Origin Shield Support in Canada (https://www.foxy.io/blog/cloudfront-vs-cloudflare-and-how-to-reduce-response-times-for-both-by-35/)
 - [ ] TLS 1.3 Only option
 - [-] Response Header Policy (easier to meet security best practice and reduce header size) (workarounds, add more behaviours or set to single char):
@@ -80,6 +81,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## S3
 - [ ] For Upload Signed URLs, allow only one file to complete. Additional attempts before expiry should be rejected.
+- [ ] Allow CSP header on HTML files to be set -  allow overriding to allow inline styles/scripts with `nonce/hashes`
 
 ## RDS
 - [ ] Aurora Serverless v2
