@@ -85,6 +85,8 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## RDS
 - [ ] Aurora Serverless v2
+  - [ ] Performace insights should not require a min of 2 ACU
+  - [ ] Should actually scale down to 0.5 ACU
   - [ ] Data API Missing, support for streams using `COPY TO/FROM` (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
   - [ ] Should scale down to zero ACUs (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
   - [ ] Multi-region support
