@@ -7,6 +7,9 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Support creating root and intermediate ECDSA certificates (https://letsencrypt.org/upcoming-features/#ecdsa-root-and-intermediates)
 - [ ] SES DKIM support for using ECDSA (P-384, P-521)
 
+## Route53
+- [ ] Support HTTPS and SVCB records (https://blog.cloudflare.com/speeding-up-https-and-http-3-negotiation-with-dns/)
+
 ## CloudFront
 - [ ] Allow Sveltekit named form actions to work with CloudFront Origin Request Policies and Lambda Function URLs. (https://github.com/MikeBild/sveltekit-adapter-aws/issues/27)
 - [ ] Support use of ECDSA certificates from ACM
