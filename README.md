@@ -30,7 +30,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] PAT (https://blog.cloudflare.com/eliminating-captchas-on-iphones-and-macs-using-new-standard/)
 
 ## FIPS 140 (https://aws.amazon.com/compliance/fips/)
-- [ ] Support on  sns, sqs, ssm, states, lambda, ses/email, xray, ecr, ecs, iam, etc in `ca-*` (feature parity to `us-*`)
+- [ ] Support on sns, sqs, ssm, states, lambda, ses/email, xray, ecr, ecs, iam, etc in `ca-*` (feature parity to `us-*`)
   - [ ] `useFipsEndpoint`/`AWS_USE_FIPS_ENDPOINT` blindly applies to all services, epically fails in `ca-*`
 - [ ] Plans to update to FIPS 140-3? when? (https://www.encryptionconsulting.com/knowing-the-new-fips-140-3/)
 
@@ -38,7 +38,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Easy way to only allow access from CloudFront
 
 ## Lambda
-- [ ] NodeJS 20 runtime
+- [ ] LLRT access
 - [ ] Enable support for Node.js v20 Permission Model
 - [ ] JSON Schema for all events & responses
 - [ ] AWS Supports multiple libraries for the same thing
@@ -66,6 +66,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
   - [ ] Support Server-Sent Events (SSE) (https://germano.dev/sse-websockets/#sse)
 - [ ] Allow lambda to run for hours (or fargate w/o a VPC)
 - [ ] Function URLs supports WebSockets
+- [x] NodeJS 20 runtime
 - [x] NodeJS ESM Full support
   - [x] NodeJS ESM runtime unable to access runtime or layer node_modules (Regession?)
 - [x] arm64 support in `ca-*` (feature parity to `us-*`) [2022-10-06](https://aws.amazon.com/about-aws/whats-new/2022/10/aws-lambda-functions-graviton2-12-regions/)
@@ -94,6 +95,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
   - [ ] Multi-region support
   - [ ] Performace insights should not require a min of 2 ACU
   - [ ] Data API Missing, support for streams using `COPY TO/FROM` (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
+  - [ ] Data write API in `ca-*`
   - [ ] Should scale down to zero ACUs (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
   - [x] Postgres v15 (feature parity with RDS) [2023-04-07](https://aws.amazon.com/about-aws/whats-new/2023/04/amazon-aurora-postgresql-15/)
   - [x] Postgres v14 (feature parity with RDS) [2022-06-22](https://aws.amazon.com/about-aws/whats-new/2022/06/amazon-aurora-supports-postgresql-14/)
