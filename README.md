@@ -125,10 +125,10 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [x] Update `CIS AWS Foundations Benchmark` to v1.4.0 (https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_2.html) [2022-11-10](https://aws.amazon.com/about-aws/whats-new/2022/11/security-hub-center-internet-securitys-cis-foundations-benchmark-version-1-4-0/)
 
 ## CloudWatch
-- [ ] CloudWatch RUM in ca-central-1
 - [ ] Step Function Execution event history links back to specific log, not just log group for lambda and ECS
 - [ ] X-Ray Traces link back to specific log for lambda and ECS
 - [ ] Allow easy filtering for logs using Request Id - Request Id timeline view across all services
+- [x] CloudWatch RUM in ca-central-1
 
 ## BIlling
 - CO2 Impact: 
