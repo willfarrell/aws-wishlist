@@ -11,7 +11,6 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Support HTTPS and SVCB records (https://blog.cloudflare.com/speeding-up-https-and-http-3-negotiation-with-dns/)
 
 ## CloudFront
-- [ ] Allow Sveltekit named form actions to work with CloudFront Origin Request Policies and Lambda Function URLs. (https://github.com/MikeBild/sveltekit-adapter-aws/issues/27)
 - [ ] Support use of ECDSA certificates from ACM
 - [ ] Allows s3-fips origins `bucketname.s3-fips.region....`
 - [ ] Origin Shield Support in Canada (https://www.foxy.io/blog/cloudfront-vs-cloudflare-and-how-to-reduce-response-times-for-both-by-35/)
