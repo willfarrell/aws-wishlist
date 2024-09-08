@@ -89,23 +89,24 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## S3
 - [ ] Allow Multipart Uploads to S3 buckets with Object Lock endabled by default w/ Additional checksums.
-- [x] For Upload Signed URLs, allow only one file to complete. Additional attempts before expiry should be rejected. Now possible with `If-None-Match`
 - [ ] Allow CSP header on HTML files to be set -  allow overriding to allow inline styles/scripts with `nonce/hashes`
+- [x] For Upload Signed URLs, allow only one file to complete. Additional attempts before expiry should be rejected. Now possible with `If-None-Match`
 
 ## RDS
 - [ ] Aurora Serverless v2
-  - [ ] When using a read replica, all instances are unable to scale down to minimum value.
+  - [ ] Data API doesn't support IAM roles (RDS Signer), forces use of Secrets Manager, which goes against least priveldge.
+  - [ ] Data API suport for stream responses
   - [ ] Multi-region support
-  - [ ] Performace insights should not require a min of 2 ACU
+  - [ ] Performace insights & Enahansed Logging should not require a min of 2 ACU
   - [ ] Data API Missing, support for streams using `COPY TO/FROM` (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
-  - [ ] Data write API in `ca-*`
   - [ ] Should scale down to zero ACUs (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
+  - [x] Data write API in `ca-*`
+  - [x] BUG: When using a read replica, all instances are unable to scale down to minimum value.
   - [x] Postgres v15 (feature parity with RDS) [2023-04-07](https://aws.amazon.com/about-aws/whats-new/2023/04/amazon-aurora-postgresql-15/)
   - [x] Postgres v14 (feature parity with RDS) [2022-06-22](https://aws.amazon.com/about-aws/whats-new/2022/06/amazon-aurora-supports-postgresql-14/)
 - [ ] Support for Postgres TimescaleDB extension (https://github.com/timescale/timescaledb/issues/65)
-- [ ] Cheaper RDS Proxy
 - [ ] RDS Proxy unable to connect using IAM signer
-
+- [ ] Cheaper RDS Proxy
 
 ## DynamoDB
 - [ ] DAX in `ca-*`
