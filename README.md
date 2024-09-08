@@ -11,11 +11,13 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Support HTTPS and SVCB records (https://blog.cloudflare.com/speeding-up-https-and-http-3-negotiation-with-dns/)
 
 ## CloudFront
+- [ ] Using OAC with Lambda that support POST fails. Use case SSR w/ streaming responses.
 - [ ] Support use of ECDSA certificates from ACM
 - [ ] Allows s3-fips origins `bucketname.s3-fips.region....`
 - [ ] Origin Shield Support in Canada (https://www.foxy.io/blog/cloudfront-vs-cloudflare-and-how-to-reduce-response-times-for-both-by-35/)
 - [ ] TLS 1.3 Only option
 - [-] Response Header Policy (easier to meet security best practice and reduce header size) (workarounds, add more behaviours or set to single char):
+  - [ ] Unable to remove `Server` header. Workaround, set to `_`
   - [x] Unable to set headers to blank (ie `Server`, `X-Powered-By`) [2023-01-03](https://aws.amazon.com/about-aws/whats-new/2023/01/amazon-cloudfront-supports-removal-response-headers/)
   - `Content-Security-Policy` incorrectly applies to non-html - workaround possible
   - Add support for `Permissions-Policy`, apply to html and js files only
@@ -34,11 +36,12 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Plans to update to FIPS 140-3? when? (https://www.encryptionconsulting.com/knowing-the-new-fips-140-3/)
 
 ### API Gateway (HTTP)
-- [ ] Easy way to only allow access from CloudFront
+- [ ] Easy way to only allow access from CloudFront. OAC now exists, but doesn't support apig.
 
 ## Lambda
-- [ ] LLRT access
+- [ ] LLRT x Middy support
 - [ ] Enable support for Node.js v20 Permission Model
+  - [ ] Support security policy to limit disk and network access (https://github.com/awslabs/aws-lambda-powertools-typescript/discussions/690 / https://medium.com/cloud-security/lambda-networking-72e2b915f31b)
 - [ ] JSON Schema for all events & responses
 - [ ] AWS Supports multiple libraries for the same thing
   - [ ] Trace 
@@ -53,19 +56,18 @@ List of features I'd love to see come to AWS. For the most part improved securit
     - [AWS Powertools TypeScript](https://awslabs.github.io/aws-lambda-powertools-typescript/latest/core/logger/)
     - [Otel](https://aws-otel.github.io/docs/getting-started/javascript-sdk)
 - [ ] Allow X-Ray tracing for cold starts
-- [x] Support for stream responses (https://github.com/middyjs/middy/issues/678) [2023-04-07](https://aws.amazon.com/about-aws/whats-new/2023/04/aws-lambda-response-payload-streaming/)
 - [ ] Function URL and CloudFront Origin Request Policies don't support Svelte named form actions (`?/action`) (https://github.com/MikeBild/sveltekit-adapter-aws/issues/27)
 - [ ] Function URL querystring key don't support OData parameters (`?$top`)
-- [ ] Support security policy to limit disk and network access (https://github.com/awslabs/aws-lambda-powertools-typescript/discussions/690 / https://medium.com/cloud-security/lambda-networking-72e2b915f31b)
 - [ ] [SDK v3 support for S3 global endpoints](https://github.com/aws/aws-sdk-js-v3/issues/1807)
 - [ ] arm64 support for Lambda@Edge
 - [ ] All services support TLS v1.3 (https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/enforcing-tls.html)
-- [ ] Built-in AbortController timeout signal (See middy implementation https://github.com/middyjs/middy/blob/main/packages/core/index.js#L103-L121)
 - [ ] Support multiple responses
   - [ ] Early Hints (https://developer.chrome.com/blog/early-hints/) (https://blog.cloudflare.com/early-hints-on-cloudflare-pages/)
   - [ ] Support Server-Sent Events (SSE) (https://germano.dev/sse-websockets/#sse)
 - [ ] Allow lambda to run for hours (or fargate w/o a VPC)
+- [ ] Built-in AbortController timeout signal (See middy implementation https://github.com/middyjs/middy/blob/main/packages/core/index.js#L103-L121)
 - [ ] Function URLs supports WebSockets
+- [x] Support for stream responses (https://github.com/middyjs/middy/issues/678) [2023-04-07](https://aws.amazon.com/about-aws/whats-new/2023/04/aws-lambda-response-payload-streaming/)
 - [x] NodeJS 20 runtime
 - [x] NodeJS ESM Full support
   - [x] NodeJS ESM runtime unable to access runtime or layer node_modules (Regession?)
@@ -74,10 +76,10 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [x] Inclusion of aws-sdk-v3-js in runtime (https://github.com/aws/aws-sdk-js-v3/issues/2149) [2022-11-18](https://aws.amazon.com/about-aws/whats-new/2022/11/aws-lambda-support-node-js-18/)
 
 ## ECS
-- [ ] ERC image for x-ray daemon should exist in all region -us-east-1 outage prevented image from pulling, stopping all container from running
+- [ ] ERC image for x-ray daemon should exist in all region - us-east-1 outage prevented image from pulling, stopping all container from running
 - [ ] Fargate tasks without a VPC (or lambda without time restriction)
 - [ ] Fargate tasks have 30s cold start time when being run as a task
-- [ ] bastion service for connecting to RDS (make it easier than the few work around solutions other there)
+- [x] bastion service for connecting to RDS (make it easier than the few work around solutions other there). See willfarrell/aws-bastion for how.
 - [x] arm64 support in `ca-*` (feature parity to `us-*`)
 
 ## VPC (for ECS Fargate Tasks)
@@ -86,7 +88,8 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Allow DNS override apply at the subnet level instead of the VPC level
 
 ## S3
-- [ ] For Upload Signed URLs, allow only one file to complete. Additional attempts before expiry should be rejected.
+- [ ] Allow Multipart Uploads to S3 buckets with Object Lock endabled by default w/ Additional checksums.
+- [x] For Upload Signed URLs, allow only one file to complete. Additional attempts before expiry should be rejected. Now possible with `If-None-Match`
 - [ ] Allow CSP header on HTML files to be set -  allow overriding to allow inline styles/scripts with `nonce/hashes`
 
 ## RDS
@@ -121,7 +124,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Show enabled integrations in Security standards list for easy filtering and viewing (i.e. Prowler)
 - [ ] Ability to tag a resource with the reason to suppress it in Security Hub. Shows reason inside SecHub. (i.e. Key=EC2.22, Value=Used for Fargate Task that is not always running)
 - [ ] [EC2.21](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-fsbp-controls.html#ec2-21-remediation) conflicts with [AWS Lambda / NAT Gateway Ephemeral ports](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-ephemeral-ports)
-- [ ] [Lambda.1](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-fsbp-controls.html#lambda-1-remediation) no way to pass when using CloudFront to Lambda Function URL
+- [ ] [Lambda.1](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-fsbp-controls.html#lambda-1-remediation) no way to pass when Lambda Function URL is used for SSR with POST
 - [x] Update `CIS AWS Foundations Benchmark` to v1.4.0 (https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_2.html) [2022-11-10](https://aws.amazon.com/about-aws/whats-new/2022/11/security-hub-center-internet-securitys-cis-foundations-benchmark-version-1-4-0/)
 
 ## CloudWatch
