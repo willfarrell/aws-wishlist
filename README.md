@@ -3,7 +3,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## ACM
 - [ ] Support creating root and intermediate ECDSA certificates (https://letsencrypt.org/upcoming-features/#ecdsa-root-and-intermediates)
-- [ ] SES DKIM support for using ECDSA (P-384)
+- [ ] SES DKIM support for using ECDSA (P-384) (https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim.html#send-email-authentication-dkim-1024-2048)
 - [N/A] Support storing ECDSA (P-521) certificates - deprecated from Chrome
 - [N/A] Support creating ECDSA (P-521) certificates - deprecated from Chrome
 
@@ -11,11 +11,10 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Support HTTPS and SVCB records (https://blog.cloudflare.com/speeding-up-https-and-http-3-negotiation-with-dns/)
 
 ## CloudFront
-- [ ] Using OAC with Lambda that support POST fails. Use case SSR w/ streaming responses.
-- [ ] Support use of ECDSA certificates from ACM
+- [ ] Using OAC with Lambda Function URL that support POST. Use case SSR w/ streaming responses.
+- [ ] Support use of ECDSA P-384 certificates from ACM (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-and-https-requirements.html#https-requirements-size-of-public-key)
 - [ ] Allows s3-fips origins `bucketname.s3-fips.region....`
 - [ ] Origin Shield Support in Canada (https://www.foxy.io/blog/cloudfront-vs-cloudflare-and-how-to-reduce-response-times-for-both-by-35/)
-- [ ] TLS 1.3 Only option
 - [-] Response Header Policy (easier to meet security best practice and reduce header size) (workarounds, add more behaviours or set to single char):
   - [ ] Unable to remove `Server` header. Workaround, set to `_`
   - [x] Unable to set headers to blank (ie `Server`, `X-Powered-By`) [2023-01-03](https://aws.amazon.com/about-aws/whats-new/2023/01/amazon-cloudfront-supports-removal-response-headers/)
@@ -24,7 +23,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
   - Add support to `Report-To`, apply to html files only
   - Maybe there needs to be an option to set the mime types a header should be applied to - workaround possible
 - Protocol Feature Parity w/ CloudFlare
-  - [?] HTTP/2 PUSH/0-RTT (https://www.linkedin.com/pulse/dear-cloudfront-wheres-server-push-0-rtt-http3-almost-agarwalla/?articleId=6662735421019160577) (Deprecated: https://developer.chrome.com/blog/removing-push/)
+  - [N/A] HTTP/2 PUSH/0-RTT (https://www.linkedin.com/pulse/dear-cloudfront-wheres-server-push-0-rtt-http3-almost-agarwalla/?articleId=6662735421019160577) (Deprecated: https://developer.chrome.com/blog/removing-push/)
   - [x] HTTP/3 [2022-08-15](https://aws.amazon.com/about-aws/whats-new/2022/08/amazon-cloudfront-supports-http-3-quic/)
 
 ## WAF
@@ -88,7 +87,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Allow DNS override apply at the subnet level instead of the VPC level
 
 ## S3
-- [ ] Allow Multipart Uploads to S3 buckets with Object Lock endabled by default w/ Additional checksums.
+- [ ] Allow Content-Digest header support
 - [ ] Allow CSP header on HTML files to be set -  allow overriding to allow inline styles/scripts with `nonce/hashes`
 - [x] For Upload Signed URLs, allow only one file to complete. Additional attempts before expiry should be rejected. Now possible with `If-None-Match`
 
@@ -118,7 +117,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Support event sources (CloudFront, APIG HTTP, cloudwatch, s3, sns, console)
   - [x] SNS [2023-02-10](https://aws.amazon.com/about-aws/whats-new/2023/02/amazon-sns-x-ray-active-tracing-visualize-analyze-debug-application-performance/)
 - [ ] Support for x-ray on CloudFront + WAF + lambda@edge
-- [ ] Be able to measure during cold start (queue and connect to first request ID?)
+- [ ] Be able to measure during lambda cold start (queue and connect to first request ID?)
 - [ ] Be able to see longer time period (24-36h)
 
 ## Security Hub
