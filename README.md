@@ -2,10 +2,10 @@
 List of features I'd love to see come to AWS. For the most part improved security, performance, feature parity with other services and data centres. If you work at AWS and would like to discuss some of these items, you can find me on the `AWS Developers` Slack Workspace. I'm known for maintaining [Middy](https://github.com/middyjs/middy), the NodeJS AWS Lambda middleware framework.
 
 ## ACM
-- [ ] Support storing ECDSA (P-521) certificates
-- [ ] Support creating ECDSA (P-521) certificates
 - [ ] Support creating root and intermediate ECDSA certificates (https://letsencrypt.org/upcoming-features/#ecdsa-root-and-intermediates)
-- [ ] SES DKIM support for using ECDSA (P-384, P-521)
+- [ ] SES DKIM support for using ECDSA (P-384)
+- [N/A] Support storing ECDSA (P-521) certificates - deprecated from Chrome
+- [N/A] Support creating ECDSA (P-521) certificates - deprecated from Chrome
 
 ## Route53
 - [ ] Support HTTPS and SVCB records (https://blog.cloudflare.com/speeding-up-https-and-http-3-negotiation-with-dns/)
