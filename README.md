@@ -8,7 +8,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [N/A] Support creating ECDSA (P-521) certificates - deprecated from Chrome
 
 ## Route53
-- [ ] Support HTTPS and SVCB records (https://blog.cloudflare.com/speeding-up-https-and-http-3-negotiation-with-dns/)
+- [x] Support HTTPS and SVCB records (https://blog.cloudflare.com/speeding-up-https-and-http-3-negotiation-with-dns/) [2024-10-30](https://aws.amazon.com/about-aws/whats-new/2024/10/amazon-route-53-https-sshfp-svcb-tlsa-dns-support/)
 
 ## CloudFront
 - [ ] Using OAC with Lambda Function URL that support POST. Use case SSR w/ streaming responses.
@@ -20,7 +20,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
   - [x] Unable to set headers to blank (ie `Server`, `X-Powered-By`) [2023-01-03](https://aws.amazon.com/about-aws/whats-new/2023/01/amazon-cloudfront-supports-removal-response-headers/)
   - `Content-Security-Policy` incorrectly applies to non-html - workaround possible
   - Add support for `Permissions-Policy`, apply to html and js files only
-  - Add support to `Report-To`, apply to html files only
+  - Add support to `Report-To`/`Reporting-Endpoints`, apply to html files only
   - Maybe there needs to be an option to set the mime types a header should be applied to - workaround possible
 - Protocol Feature Parity w/ CloudFlare
   - [N/A] HTTP/2 PUSH/0-RTT (https://www.linkedin.com/pulse/dear-cloudfront-wheres-server-push-0-rtt-http3-almost-agarwalla/?articleId=6662735421019160577) (Deprecated: https://developer.chrome.com/blog/removing-push/)
@@ -77,7 +77,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 ## ECS
 - [ ] ERC image for x-ray daemon should exist in all region - us-east-1 outage prevented image from pulling, stopping all container from running
 - [ ] Fargate tasks without a VPC (or lambda without time restriction)
-- [ ] Fargate tasks have 30s cold start time when being run as a task
+- [ ] Fargate tasks have up to 30s cold start time when being run as a task
 - [x] bastion service for connecting to RDS (make it easier than the few work around solutions other there). See willfarrell/aws-bastion for how.
 - [x] arm64 support in `ca-*` (feature parity to `us-*`)
 
@@ -94,7 +94,8 @@ List of features I'd love to see come to AWS. For the most part improved securit
 ## RDS
 - [ ] Aurora Serverless v2
   - [ ] Data API doesn't support IAM roles (RDS Signer), forces use of Secrets Manager, which goes against least priveldge.
-  - [ ] Data API suport for stream responses
+  - [ ] Data API support from read replicas
+  - [ ] Data API support for stream responses
   - [ ] Multi-region support
   - [ ] Performace insights & Enahansed Logging should not require a min of 2 ACU
   - [ ] Data API Missing, support for streams using `COPY TO/FROM` (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
