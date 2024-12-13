@@ -96,6 +96,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Aurora DSQL (successor to Aurora Serverless v2?)
   - [ ] Supports views, triggers, foreign keys
   - [ ] Supports postgis
+  - [ ] Data API support
 - [ ] Aurora Serverless v2
   - [ ] Data API doesn't support IAM roles (RDS Signer), forces use of Secrets Manager, which goes against least priveldge.
   - [ ] Data API support from read replicas
