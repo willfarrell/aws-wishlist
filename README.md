@@ -12,26 +12,27 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## CloudFront
 - [ ] Using OAC with Lambda Function URL that support POST. Use case SSR w/ streaming responses.
+- [ ] Allow for dual certificate (RSA & ECDSA) (ex https://www.ssllabs.com/ssltest/analyze.html?d=blog.cloudflare.com&s=104.18.29.7&latest)
 - [ ] Support use of ECDSA P-384 certificates from ACM (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-and-https-requirements.html#https-requirements-size-of-public-key)
 - [ ] Allows s3-fips origins `bucketname.s3-fips.region....`
 - [ ] Origin Shield Support in Canada (https://www.foxy.io/blog/cloudfront-vs-cloudflare-and-how-to-reduce-response-times-for-both-by-35/)
 - [-] Response Header Policy (easier to meet security best practice and reduce header size) (workarounds, add more behaviours or set to single char):
   - [ ] Unable to remove `Server` header. Workaround, set to `_`
   - [x] Unable to set headers to blank (ie `Server`, `X-Powered-By`) [2023-01-03](https://aws.amazon.com/about-aws/whats-new/2023/01/amazon-cloudfront-supports-removal-response-headers/)
-  - `Content-Security-Policy` incorrectly applies to non-html - workaround possible
-  - Add support for `Permissions-Policy`, apply to html and js files only
-  - Add support to `Report-To`/`Reporting-Endpoints`, apply to html files only
-  - Maybe there needs to be an option to set the mime types a header should be applied to - workaround possible
+  - [ ] `Content-Security-Policy` incorrectly applies to non-html - workaround possible
+  - [ ] Add support for `Permissions-Policy`, apply to html and js files only
+  - [ ] Add support to `Report-To`/`Reporting-Endpoints`, apply to html files only
+  - [ ] Maybe there needs to be an option to set the mime types a header should be applied to - workaround possible
 - Protocol Feature Parity w/ CloudFlare
   - [N/A] HTTP/2 PUSH/0-RTT (https://www.linkedin.com/pulse/dear-cloudfront-wheres-server-push-0-rtt-http3-almost-agarwalla/?articleId=6662735421019160577) (Deprecated: https://developer.chrome.com/blog/removing-push/)
   - [x] HTTP/3 [2022-08-15](https://aws.amazon.com/about-aws/whats-new/2022/08/amazon-cloudfront-supports-http-3-quic/)
 
 ## WAF
-- [ ] PAT (https://blog.cloudflare.com/eliminating-captchas-on-iphones-and-macs-using-new-standard/)
+- [ ] PAT? (https://blog.cloudflare.com/eliminating-captchas-on-iphones-and-macs-using-new-standard/)
 
 ## FIPS 140 (https://aws.amazon.com/compliance/fips/)
 - [ ] Support on sns, sqs, ssm, states, lambda, ses/email, xray, ecr, ecs, iam, etc in `ca-*` (feature parity to `us-*`)
-  - [ ] `useFipsEndpoint`/`AWS_USE_FIPS_ENDPOINT` blindly applies to all services, epically fails in `ca-*`
+  - [ ] `useFipsEndpoint`/`AWS_USE_FIPS_ENDPOINT` blindly applies to all services, epicly fails in `ca-*`
 - [ ] Plans to update to FIPS 140-3? when? (https://www.encryptionconsulting.com/knowing-the-new-fips-140-3/)
 
 ### API Gateway (HTTP)
@@ -41,8 +42,8 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] LLRT x Middy support
 - [ ] Enable support for Node.js v20 Permission Model
   - [ ] Support security policy to limit disk and network access (https://github.com/awslabs/aws-lambda-powertools-typescript/discussions/690 / https://medium.com/cloud-security/lambda-networking-72e2b915f31b)
-- [ ] JSON Schema for all events & responses
-- [ ] AWS Supports multiple libraries for the same thing
+- [ ] JSON Schema for all lambda events & responses
+- [ ] AWS Supports multiple libraries for the same thing, simplify
   - [ ] Trace 
     - [AWS SDK XRay Node](https://github.com/aws/aws-xray-sdk-node/tree/master)
     - [AWS Powertools TypeScript](https://awslabs.github.io/aws-lambda-powertools-typescript/latest/core/tracer/)
@@ -57,7 +58,6 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Allow X-Ray tracing for cold starts
 - [ ] Function URL and CloudFront Origin Request Policies don't support Svelte named form actions (`?/action`) (https://github.com/MikeBild/sveltekit-adapter-aws/issues/27)
 - [ ] Function URL querystring key don't support OData parameters (`?$top`)
-- [ ] [SDK v3 support for S3 global endpoints](https://github.com/aws/aws-sdk-js-v3/issues/1807)
 - [ ] arm64 support for Lambda@Edge
 - [ ] All services support TLS v1.3 (https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/enforcing-tls.html)
 - [ ] Support multiple responses
@@ -66,6 +66,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Allow lambda to run for hours (or fargate w/o a VPC)
 - [ ] Built-in AbortController timeout signal (See middy implementation https://github.com/middyjs/middy/blob/main/packages/core/index.js#L103-L121)
 - [ ] Function URLs supports WebSockets
+- [x] [SDK v3 support for S3 global endpoints](https://github.com/aws/aws-sdk-js-v3/issues/1807)
 - [x] Support for stream responses (https://github.com/middyjs/middy/issues/678) [2023-04-07](https://aws.amazon.com/about-aws/whats-new/2023/04/aws-lambda-response-payload-streaming/)
 - [x] NodeJS 20 runtime
 - [x] NodeJS ESM Full support
@@ -88,18 +89,21 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## S3
 - [ ] Allow Content-Digest header support
-- [ ] Allow CSP header on HTML files to be set -  allow overriding to allow inline styles/scripts with `nonce/hashes`
+- [ ] Allow CSP header on HTML files to be set -  allows overriding to allow inline styles/scripts with `nonce/hashes`
 - [x] For Upload Signed URLs, allow only one file to complete. Additional attempts before expiry should be rejected. Now possible with `If-None-Match`
 
 ## RDS
+- [ ] Aurora DSQL (successor to Aurora Serverless v2?)
+  - [ ] Supports views, triggers, foreign keys
+  - [ ] Supports postgis
 - [ ] Aurora Serverless v2
   - [ ] Data API doesn't support IAM roles (RDS Signer), forces use of Secrets Manager, which goes against least priveldge.
   - [ ] Data API support from read replicas
   - [ ] Data API support for stream responses
-  - [ ] Multi-region support
+  - [ ] Multi-region support - replaced by DSQL?
   - [ ] Performace insights & Enahansed Logging should not require a min of 2 ACU
   - [ ] Data API Missing, support for streams using `COPY TO/FROM` (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
-  - [ ] Should scale down to zero ACUs (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
+  - [x] Should scale down to zero ACUs (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
   - [x] Data write API in `ca-*`
   - [x] BUG: When using a read replica, all instances are unable to scale down to minimum value.
   - [x] Postgres v15 (feature parity with RDS) [2023-04-07](https://aws.amazon.com/about-aws/whats-new/2023/04/amazon-aurora-postgresql-15/)
@@ -124,8 +128,8 @@ List of features I'd love to see come to AWS. For the most part improved securit
 ## Security Hub
 - [ ] Show enabled integrations in Security standards list for easy filtering and viewing (i.e. Prowler)
 - [ ] Ability to tag a resource with the reason to suppress it in Security Hub. Shows reason inside SecHub. (i.e. Key=EC2.22, Value=Used for Fargate Task that is not always running)
-- [ ] [EC2.21](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-fsbp-controls.html#ec2-21-remediation) conflicts with [AWS Lambda / NAT Gateway Ephemeral ports](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-ephemeral-ports)
 - [ ] [Lambda.1](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-fsbp-controls.html#lambda-1-remediation) no way to pass when Lambda Function URL is used for SSR with POST
+- [x] [EC2.21](https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-fsbp-controls.html#ec2-21-remediation) conflicts with [AWS Lambda / NAT Gateway Ephemeral ports](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-ephemeral-ports)
 - [x] Update `CIS AWS Foundations Benchmark` to v1.4.0 (https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_2.html) [2022-11-10](https://aws.amazon.com/about-aws/whats-new/2022/11/security-hub-center-internet-securitys-cis-foundations-benchmark-version-1-4-0/)
 
 ## CloudWatch
