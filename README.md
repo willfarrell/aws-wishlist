@@ -11,9 +11,9 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [x] Support HTTPS and SVCB records (https://blog.cloudflare.com/speeding-up-https-and-http-3-negotiation-with-dns/) [2024-10-30](https://aws.amazon.com/about-aws/whats-new/2024/10/amazon-route-53-https-sshfp-svcb-tlsa-dns-support/)
 
 ## CloudFront
+- [ ] Support use of ECDSA P-384 certificates from ACM (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-and-https-requirements.html#https-requirements-size-of-public-key)
 - [ ] Using OAC with Lambda Function URL that support POST. Use case SSR w/ streaming responses.
 - [ ] Allow for dual certificate (RSA & ECDSA) (ex https://www.ssllabs.com/ssltest/analyze.html?d=blog.cloudflare.com&s=104.18.29.7&latest)
-- [ ] Support use of ECDSA P-384 certificates from ACM (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-and-https-requirements.html#https-requirements-size-of-public-key)
 - [ ] Allows s3-fips origins `bucketname.s3-fips.region....`
 - [ ] Origin Shield Support in Canada (https://www.foxy.io/blog/cloudfront-vs-cloudflare-and-how-to-reduce-response-times-for-both-by-35/)
 - [-] Response Header Policy (easier to meet security best practice and reduce header size) (workarounds, add more behaviours or set to single char):
@@ -39,6 +39,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Easy way to only allow access from CloudFront. OAC now exists, but doesn't support apig.
 
 ## Lambda
+- [ ] Fix https://github.com/aws/aws-lambda-nodejs-runtime-interface-client/issues/96
 - [ ] LLRT x Middy support
 - [ ] Enable support for Node.js v20 Permission Model
   - [ ] Support security policy to limit disk and network access (https://github.com/awslabs/aws-lambda-powertools-typescript/discussions/690 / https://medium.com/cloud-security/lambda-networking-72e2b915f31b)
