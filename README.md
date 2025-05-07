@@ -39,11 +39,11 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Easy way to only allow access from CloudFront. OAC now exists, but doesn't support apig.
 
 ## Lambda
-- [ ] Fix https://github.com/aws/aws-lambda-nodejs-runtime-interface-client/issues/96
+- [ ] Bug: Function URL remove compression from responses https://github.com/aws/aws-lambda-nodejs-runtime-interface-client/issues/96
 - [ ] LLRT x Middy support
 - [ ] Enable support for Node.js v20 Permission Model
   - [ ] Support security policy to limit disk and network access (https://github.com/awslabs/aws-lambda-powertools-typescript/discussions/690 / https://medium.com/cloud-security/lambda-networking-72e2b915f31b)
-- [ ] JSON Schema for all lambda events & responses
+- [ ] Documented JSON Schema for all lambda events & responses
 - [ ] AWS Supports multiple libraries for the same thing, simplify
   - [ ] Trace 
     - [AWS SDK XRay Node](https://github.com/aws/aws-xray-sdk-node/tree/master)
@@ -64,7 +64,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Support multiple responses
   - [ ] Early Hints (https://developer.chrome.com/blog/early-hints/) (https://blog.cloudflare.com/early-hints-on-cloudflare-pages/)
   - [ ] Support Server-Sent Events (SSE) (https://germano.dev/sse-websockets/#sse)
-- [ ] Allow lambda to run for hours (or fargate w/o a VPC)
+- [ ] Allow lambda to run for hours (or fargate w/o a large cold start delay)
 - [ ] Built-in AbortController timeout signal (See middy implementation https://github.com/middyjs/middy/blob/main/packages/core/index.js#L103-L121)
 - [ ] Function URLs supports WebSockets
 - [x] [SDK v3 support for S3 global endpoints](https://github.com/aws/aws-sdk-js-v3/issues/1807)
@@ -77,9 +77,10 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [x] Inclusion of aws-sdk-v3-js in runtime (https://github.com/aws/aws-sdk-js-v3/issues/2149) [2022-11-18](https://aws.amazon.com/about-aws/whats-new/2022/11/aws-lambda-support-node-js-18/)
 
 ## ECS
+- [ ] SSM agent doesn't follow security hub recommendations https://github.com/aws/amazon-ssm-agent/issues/588
+- [ ] Fargate tasks have a cold start time of up to 30s when being run as a task
 - [ ] ERC image for x-ray daemon should exist in all region - us-east-1 outage prevented image from pulling, stopping all container from running
 - [ ] Fargate tasks without a VPC (or lambda without time restriction)
-- [ ] Fargate tasks have up to 30s cold start time when being run as a task
 - [x] bastion service for connecting to RDS (make it easier than the few work around solutions other there). See willfarrell/aws-bastion for how.
 - [x] arm64 support in `ca-*` (feature parity to `us-*`)
 
@@ -94,9 +95,12 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [x] For Upload Signed URLs, allow only one file to complete. Additional attempts before expiry should be rejected. Now possible with `If-None-Match`
 
 ## RDS
+- [ ] AWS PostgreSQL ODBC (https://github.com/aws/aws-pgsql-odbc/)
+  - [ ] Have it included in the nodejs lambda runtime
+  - [ ] Document a sample of how to use with nodejs
 - [ ] Aurora DSQL (successor to Aurora Serverless v2?)
-  - [ ] Supports views, triggers, foreign keys
-  - [ ] Supports postgis
+  - [ ] Support views, triggers, foreign keys
+  - [ ] Support postgis
   - [ ] Data API support
 - [ ] Aurora Serverless v2
   - [ ] Data API doesn't support IAM roles (RDS Signer), forces use of Secrets Manager, which goes against least priveldge.
@@ -115,10 +119,10 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Cheaper RDS Proxy
 
 ## DynamoDB
-- [ ] DAX in `ca-*`
+- [ ] DAX in `ca-*` (https://docs.aws.amazon.com/general/latest/gr/ddb.html#ddb_region)
 
 ## Neptune
-- [ ] serverless scales lower [2023-03-02](https://aws.amazon.com/about-aws/whats-new/2023/03/amazon-neptune-serverless-scales-down-1-ncu-costs)
+- [ ] serverless scales to zero [2023-03-02](https://aws.amazon.com/about-aws/whats-new/2023/03/amazon-neptune-serverless-scales-down-1-ncu-costs)
 
 ## X-Ray
 - [ ] Support event sources (CloudFront, APIG HTTP, cloudwatch, s3, sns, console)
@@ -135,7 +139,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [x] Update `CIS AWS Foundations Benchmark` to v1.4.0 (https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_2.html) [2022-11-10](https://aws.amazon.com/about-aws/whats-new/2022/11/security-hub-center-internet-securitys-cis-foundations-benchmark-version-1-4-0/)
 
 ## CloudWatch
-- [ ] Step Function Execution event history links back to specific log, not just log group for lambda and ECS
+- [ ] Console: Step Function Execution event history links back to specific log, not just log group for lambda and ECS
 - [ ] X-Ray Traces link back to specific log for lambda and ECS
 - [ ] Allow easy filtering for logs using Request Id - Request Id timeline view across all services
 - [x] CloudWatch RUM in ca-central-1
