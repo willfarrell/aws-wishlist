@@ -1,8 +1,18 @@
 # AWS Wishlist
 List of features I'd love to see come to AWS. For the most part improved security, performance, feature parity with other services and data centres. If you work at AWS and would like to discuss some of these items, you can find me on the `AWS Developers` Slack Workspace. I'm known for maintaining [Middy](https://github.com/middyjs/middy), the NodeJS AWS Lambda middleware framework.
 
+## Top picks
+- [ ] Lambda: Function URL remove compression from responses https://github.com/aws/aws-lambda-nodejs-runtime-interface-client/issues/96
+- [ ] Lambda: LLRT x Middy support https://github.com/middyjs/middy/issues/1181
+- [ ] CloudFront: Using OAC with Lambda Function URL that support POST.
+- [ ] CloudFront: Support use of ECDSA P-384 certificates from ACM
+- [ ] S3: Allow `Content-Digest` header support
+- [ ] RDS: DSQL w/ data api (see below)
+
+
 ## ACM
 - [ ] Support creating root and intermediate ECDSA certificates (https://letsencrypt.org/upcoming-features/#ecdsa-root-and-intermediates)
+- [ ] Support 6 day certificate rotation period (https://letsencrypt.org/2025/02/20/first-short-lived-cert-issued/, 47d planned for 2029 https://www.theregister.com/2025/04/14/ssl_tls_certificates/)
 - [ ] SES DKIM support for using ECDSA (P-384) (https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim.html#send-email-authentication-dkim-1024-2048)
 - [N/A] Support storing ECDSA (P-521) certificates - deprecated from Chrome
 - [N/A] Support creating ECDSA (P-521) certificates - deprecated from Chrome
@@ -11,17 +21,17 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [x] Support HTTPS and SVCB records (https://blog.cloudflare.com/speeding-up-https-and-http-3-negotiation-with-dns/) [2024-10-30](https://aws.amazon.com/about-aws/whats-new/2024/10/amazon-route-53-https-sshfp-svcb-tlsa-dns-support/)
 
 ## CloudFront
-- [ ] Support use of ECDSA P-384 certificates from ACM (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-and-https-requirements.html#https-requirements-size-of-public-key)
 - [ ] Using OAC with Lambda Function URL that support POST. Use case SSR w/ streaming responses.
+- [ ] Support use of ECDSA P-384 certificates from ACM (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-and-https-requirements.html#https-requirements-size-of-public-key, RSA cracking - https://www.sciopen.com/article/10.26599/TST.2024.9010028)
 - [ ] Allow for dual certificate (RSA & ECDSA) (ex https://www.ssllabs.com/ssltest/analyze.html?d=blog.cloudflare.com&s=104.18.29.7&latest)
 - [ ] Allows s3-fips origins `bucketname.s3-fips.region....`
 - [ ] Origin Shield Support in Canada (https://www.foxy.io/blog/cloudfront-vs-cloudflare-and-how-to-reduce-response-times-for-both-by-35/)
 - [-] Response Header Policy (easier to meet security best practice and reduce header size) (workarounds, add more behaviours or set to single char):
-  - [ ] Unable to remove `Server` header. Workaround, set to `_`
+  - [ ] Unable to remove `Server` header - workaround possible, set to `_`
   - [x] Unable to set headers to blank (ie `Server`, `X-Powered-By`) [2023-01-03](https://aws.amazon.com/about-aws/whats-new/2023/01/amazon-cloudfront-supports-removal-response-headers/)
   - [ ] `Content-Security-Policy` incorrectly applies to non-html - workaround possible
-  - [ ] Add support for `Permissions-Policy`, apply to html and js files only
-  - [ ] Add support to `Report-To`/`Reporting-Endpoints`, apply to html files only
+  - [ ] Add support for `Permissions-Policy`, apply to html and js files only - workaround possible
+  - [ ] Add support to `Report-To`/`Reporting-Endpoints`, apply to html files only - workaround possible
   - [ ] Maybe there needs to be an option to set the mime types a header should be applied to - workaround possible
 - Protocol Feature Parity w/ CloudFlare
   - [N/A] HTTP/2 PUSH/0-RTT (https://www.linkedin.com/pulse/dear-cloudfront-wheres-server-push-0-rtt-http3-almost-agarwalla/?articleId=6662735421019160577) (Deprecated: https://developer.chrome.com/blog/removing-push/)
@@ -33,14 +43,14 @@ List of features I'd love to see come to AWS. For the most part improved securit
 ## FIPS 140 (https://aws.amazon.com/compliance/fips/)
 - [ ] Support on sns, sqs, ssm, states, lambda, ses/email, xray, ecr, ecs, iam, etc in `ca-*` (feature parity to `us-*`)
   - [ ] `useFipsEndpoint`/`AWS_USE_FIPS_ENDPOINT` blindly applies to all services, epicly fails in `ca-*`
-- [ ] Plans to update to FIPS 140-3? when? (https://www.encryptionconsulting.com/knowing-the-new-fips-140-3/)
+- [x] Plans to update to FIPS 140-3? when? (https://www.encryptionconsulting.com/knowing-the-new-fips-140-3/) - happened sometime ~2025-05
 
 ### API Gateway (HTTP)
 - [ ] Easy way to only allow access from CloudFront. OAC now exists, but doesn't support apig.
 
 ## Lambda
 - [ ] Bug: Function URL remove compression from responses https://github.com/aws/aws-lambda-nodejs-runtime-interface-client/issues/96
-- [ ] LLRT x Middy support
+- [ ] LLRT x Middy support https://github.com/middyjs/middy/issues/1181
 - [ ] Enable support for Node.js v20 Permission Model
   - [ ] Support security policy to limit disk and network access (https://github.com/awslabs/aws-lambda-powertools-typescript/discussions/690 / https://medium.com/cloud-security/lambda-networking-72e2b915f31b)
 - [ ] Documented JSON Schema for all lambda events & responses
@@ -90,7 +100,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Allow DNS override apply at the subnet level instead of the VPC level
 
 ## S3
-- [ ] Allow Content-Digest header support
+- [ ] Allow `Content-Digest` header support on S3
 - [ ] Allow CSP header on HTML files to be set -  allows overriding to allow inline styles/scripts with `nonce/hashes`
 - [x] For Upload Signed URLs, allow only one file to complete. Additional attempts before expiry should be rejected. Now possible with `If-None-Match`
 
@@ -108,7 +118,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
   - [ ] Data API support for stream responses
   - [ ] Multi-region support - replaced by DSQL?
   - [ ] Performace insights & Enahansed Logging should not require a min of 2 ACU
-  - [ ] Data API Missing, support for streams using `COPY TO/FROM` (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
+  - [ ] Data API missing support for streams using `COPY TO/FROM` (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
   - [x] Should scale down to zero ACUs (https://www.lastweekinaws.com/blog/the-aurora-serverless-road-not-taken/)
   - [x] Data write API in `ca-*`
   - [x] BUG: When using a read replica, all instances are unable to scale down to minimum value.
