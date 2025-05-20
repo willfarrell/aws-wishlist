@@ -25,7 +25,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [ ] Support use of ECDSA P-384 certificates from ACM (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-and-https-requirements.html#https-requirements-size-of-public-key, RSA cracking - https://www.sciopen.com/article/10.26599/TST.2024.9010028)
 - [ ] Allow for dual certificate (RSA & ECDSA) (ex https://www.ssllabs.com/ssltest/analyze.html?d=blog.cloudflare.com&s=104.18.29.7&latest)
 - [ ] Allows s3-fips origins `bucketname.s3-fips.region....`
-- [ ] Origin Shield Support in Canada (https://www.foxy.io/blog/cloudfront-vs-cloudflare-and-how-to-reduce-response-times-for-both-by-35/)
+- [ ] Origin Shield Support in Canada (https://www.foxy.io/blog/cloudfront-vs-cloudflare-and-how-to-reduce-response-times-for-both-by-35/) (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/origin-shield.html#choose-origin-shield-region)
 - [-] Response Header Policy (easier to meet security best practice and reduce header size) (workarounds, add more behaviours or set to single char):
   - [ ] Unable to remove `Server` header - workaround possible, set to `_`
   - [x] Unable to set headers to blank (ie `Server`, `X-Powered-By`) [2023-01-03](https://aws.amazon.com/about-aws/whats-new/2023/01/amazon-cloudfront-supports-removal-response-headers/)
