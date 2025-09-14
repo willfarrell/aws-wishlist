@@ -29,10 +29,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [-] Response Header Policy (easier to meet security best practice and reduce header size) (workarounds, add more behaviours or set to single char):
   - [ ] Unable to remove `Server` header - workaround possible, set to `_`
   - [x] Unable to set headers to blank (ie `Server`, `X-Powered-By`) [2023-01-03](https://aws.amazon.com/about-aws/whats-new/2023/01/amazon-cloudfront-supports-removal-response-headers/)
-  - [ ] `Content-Security-Policy` incorrectly applies to non-html - workaround possible
-  - [ ] Add support for `Permissions-Policy`, apply to html and js files only - workaround possible
-  - [ ] Add support to `Report-To`/`Reporting-Endpoints`, apply to html files only - workaround possible
-  - [ ] Maybe there needs to be an option to set the mime types a header should be applied to - workaround possible
+
 - Protocol Feature Parity w/ CloudFlare
   - [N/A] HTTP/2 PUSH/0-RTT (https://www.linkedin.com/pulse/dear-cloudfront-wheres-server-push-0-rtt-http3-almost-agarwalla/?articleId=6662735421019160577) (Deprecated: https://developer.chrome.com/blog/removing-push/)
   - [x] HTTP/3 [2022-08-15](https://aws.amazon.com/about-aws/whats-new/2022/08/amazon-cloudfront-supports-http-3-quic/)
@@ -68,7 +65,6 @@ List of features I'd love to see come to AWS. For the most part improved securit
     - [Otel](https://aws-otel.github.io/docs/getting-started/javascript-sdk)
 - [ ] Allow X-Ray tracing for cold starts
 - [ ] Function URL and CloudFront Origin Request Policies don't support Svelte named form actions (`?/action`) (https://github.com/MikeBild/sveltekit-adapter-aws/issues/27)
-- [ ] Function URL querystring key don't support OData parameters (`?$top`)
 - [ ] arm64 support for Lambda@Edge
 - [ ] All services support TLS v1.3 (https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/enforcing-tls.html)
 - [ ] Support multiple responses
@@ -125,7 +121,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
   - [x] Postgres v15 (feature parity with RDS) [2023-04-07](https://aws.amazon.com/about-aws/whats-new/2023/04/amazon-aurora-postgresql-15/)
   - [x] Postgres v14 (feature parity with RDS) [2022-06-22](https://aws.amazon.com/about-aws/whats-new/2022/06/amazon-aurora-supports-postgresql-14/)
 - [ ] Support for Postgres TimescaleDB extension (https://github.com/timescale/timescaledb/issues/65)
-- [ ] RDS Proxy unable to connect using IAM signer
+- [x] RDS Proxy unable to connect using IAM signer [2025-09-122](https://aws.amazon.com/about-aws/whats-new/2025/09/amazon-rds-proxy-end-to-end-iam-authentication/)
 - [ ] Cheaper RDS Proxy
 
 ## DynamoDB
@@ -159,6 +155,9 @@ List of features I'd love to see come to AWS. For the most part improved securit
   - [ ] Have `ca-central-1` & `ca-west-1` classified as a green data centres
   - [ ] More granular details - by service
   - [ ] Toggle egress estimate? CloudFront to IP transfer impact
+
+## Other
+- AWS Builder Center only allows voting on 5 items (https://builder.aws.com/wishlist)
 
 ## New
 - IPFS serverless service (Save files to s3, serverless node, serverless http gateway)
