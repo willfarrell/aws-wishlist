@@ -64,6 +64,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
     - [AWS Powertools TypeScript](https://awslabs.github.io/aws-lambda-powertools-typescript/latest/core/logger/)
     - [Otel](https://aws-otel.github.io/docs/getting-started/javascript-sdk)
 - [ ] Allow X-Ray tracing for cold starts
+- [ ] Support for ipv6 only subnets
 - [ ] Function URL and CloudFront Origin Request Policies don't support Svelte named form actions (`?/action`) (https://github.com/MikeBild/sveltekit-adapter-aws/issues/27)
 - [ ] arm64 support for Lambda@Edge
 - [ ] All services support TLS v1.3 (https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/enforcing-tls.html)
