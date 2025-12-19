@@ -4,7 +4,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 ## Top picks
 - [ ] Lambda: Function URL remove compression from responses https://github.com/aws/aws-lambda-nodejs-runtime-interface-client/issues/96
 - [ ] Lambda: LLRT x Middy support https://github.com/middyjs/middy/issues/1181
-- [ ] CloudFront: Using OAC with Lambda Function URL that support POST.
+- [ ] CloudFront: Using OAC with Lambda Function URL to support POST.
 - [ ] CloudFront: Support use of ECDSA P-384 certificates from ACM
 - [ ] S3: Allow `Content-Digest` header support
 - [ ] RDS: DSQL w/ data api (see below)
@@ -21,7 +21,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [x] Support HTTPS and SVCB records (https://blog.cloudflare.com/speeding-up-https-and-http-3-negotiation-with-dns/) [2024-10-30](https://aws.amazon.com/about-aws/whats-new/2024/10/amazon-route-53-https-sshfp-svcb-tlsa-dns-support/)
 
 ## CloudFront
-- [ ] Using OAC with Lambda Function URL that support POST. Use case SSR w/ streaming responses.
+- [ ] Using OAC with Lambda Function URL to support POST. Use case SSR w/ streaming responses.
 - [ ] Support use of ECDSA P-384 certificates from ACM (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cnames-and-https-requirements.html#https-requirements-size-of-public-key, RSA cracking - https://www.sciopen.com/article/10.26599/TST.2024.9010028)
 - [ ] Allow for dual certificate (RSA & ECDSA) (ex https://www.ssllabs.com/ssltest/analyze.html?d=blog.cloudflare.com&s=104.18.29.7&latest)
 - [ ] Allows s3-fips origins `bucketname.s3-fips.region....`
@@ -84,7 +84,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 
 ## ECS
 - [ ] SSM agent doesn't follow security hub recommendations https://github.com/aws/amazon-ssm-agent/issues/588
-- [ ] Fargate tasks have a cold start time of up to 30s when being run as a task
+- [ ] Fargate tasks have a cold start time of up to 30s when being run as a task - New workaround using Managed Instances
 - [ ] ERC image for x-ray daemon should exist in all region - us-east-1 outage prevented image from pulling, stopping all container from running
 - [ ] Fargate tasks without a VPC (or lambda without time restriction)
 - [x] bastion service for connecting to RDS (make it easier than the few work around solutions other there). See willfarrell/aws-bastion for how.
@@ -101,6 +101,7 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [x] For Upload Signed URLs, allow only one file to complete. Additional attempts before expiry should be rejected. Now possible with `If-None-Match`
 
 ## RDS
+- [ ] Allow DB subnet groups to be created with ipv6 only subnets (throws InternalFailure: UnknownError)
 - [ ] AWS PostgreSQL ODBC (https://github.com/aws/aws-pgsql-odbc/)
   - [ ] Have it included in the nodejs lambda runtime
   - [ ] Document a sample of how to use with nodejs
