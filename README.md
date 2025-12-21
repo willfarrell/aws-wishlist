@@ -92,7 +92,8 @@ List of features I'd love to see come to AWS. For the most part improved securit
 - [x] arm64 support in `ca-*` (feature parity to `us-*`)
 
 ## VPC (for ECS Fargate Tasks)
-- [ ] Cheaper / Smaller NAT Gateway option
+- [ ] Regional NAT Gateway scales for any ENI (https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateways-regional.html), should only scale when and instance has a security group that would need a NAT.
+- [ ] Cheaper / Smaller NAT Gateway option - Regional NAT gives horizantal scaling, but not vertical scaling.
 - [ ] Cheaper VPC Endpoints, combine all into one, or have all work like gateways
 - [ ] Allow DNS override apply at the subnet level instead of the VPC level
 
